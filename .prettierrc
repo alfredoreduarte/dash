@@ -3,5 +3,6 @@
   "useTabs": true,
   "semi": false,
   "trailingComma": "es5",
-  "insertPragma": true
+  "insertPragma": true,
+  "printWidth": 100
 }
