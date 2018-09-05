@@ -6,6 +6,8 @@ import { bindActionCreators } from "redux"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import { Helmet } from "react-helmet"
 import Footer from "./components/Footer"
+import Nav from "./components/Nav"
+import Dashboard from "./components/Dashboard"
 import AddTodo from "./containers/AddTodo"
 import VisibleTodoList from "./containers/VisibleTodoList"
 import { actions as userActions } from "./containers/Users/store"
@@ -14,31 +16,37 @@ import UsersContainer from "./containers/Users/"
 let BasicExample = ({ actions }) => (
 	<Router>
 		<div>
-			<ul>
-				<li>
-					<Link to="/">Home</Link>
-				</li>
-				<li>
-					<Link to="/about">About</Link>
-				</li>
-				<li>
-					<Link to="/redux">Redux Example</Link>
-				</li>
-				<li>
-					<Link to="/users">Users</Link>
-				</li>
-				<li>
-					<Link to="/topics">Topics</Link>
-				</li>
-			</ul>
+			<Nav />
+			<div className="content-wrapper">
+				<div className="container-fluid">
+					<ul>
+						<li>
+							<Link to="/">Home</Link>
+						</li>
+						<li>
+							<Link to="/about">About</Link>
+						</li>
+						<li>
+							<Link to="/redux">Redux Example</Link>
+						</li>
+						<li>
+							<Link to="/users">Users</Link>
+						</li>
+						<li>
+							<Link to="/topics">Topics</Link>
+						</li>
+					</ul>
 
-			<hr />
+					<hr />
 
-			<Route exact path="/" component={Home} />
-			<Route path="/about" component={About} />
-			<Route path="/redux" component={ReduxExample} />
-			<Route path="/Users" component={UsersContainer} />
-			<Route path="/topics" component={Topics} />
+					<Route exact path="/" component={Home} />
+					<Route path="/about" component={About} />
+					<Route path="/redux" component={ReduxExample} />
+					<Route path="/Users" component={UsersContainer} />
+					<Route path="/topics" component={Topics} />
+				</div>
+			</div>
+			<Dashboard />
 		</div>
 	</Router>
 )
