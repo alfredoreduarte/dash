@@ -2,7 +2,8 @@
 
 ## Development
 
-- run `yarn start` and `yarn prettier-watch` separately
+- Run `yarn start` and `yarn prettier-watch` separately
+- Duplicate `scr/App.js` and use that to replace `<App/>` inside `src/index.js`
 
 ## Guidelines
 
