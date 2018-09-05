@@ -7,12 +7,12 @@ import {
 	SET_VISIBILITY_FILTER,
 	VisibilityFilters,
 } from "../actions"
-import { rootReducer as usersReducer } from "../containers/Users/store"
+import { rootReducer as users } from "../containers/Users/store"
 const { SHOW_ALL } = VisibilityFilters
 
 const visibilityFilter = (state = VisibilityFilters.SHOW_ALL, action) => {
 	switch (action.type) {
-		case "SET_VISIBILITY_FILTER":
+		case SET_VISIBILITY_FILTER:
 			return action.filter
 		default:
 			return state
@@ -21,7 +21,7 @@ const visibilityFilter = (state = VisibilityFilters.SHOW_ALL, action) => {
 
 const todos = (state = [], action) => {
 	switch (action.type) {
-		case "ADD_TODO":
+		case ADD_TODO:
 			return [
 				...state,
 				{
@@ -30,7 +30,7 @@ const todos = (state = [], action) => {
 					completed: false,
 				},
 			]
-		case "TOGGLE_TODO":
+		case TOGGLE_TODO:
 			return state.map(
 				todo =>
 					todo.id === action.id
@@ -45,7 +45,7 @@ const todos = (state = [], action) => {
 const todoApp = combineReducers({
 	visibilityFilter,
 	todos,
-	users: usersReducer,
+	users,
 })
 
 export default todoApp
