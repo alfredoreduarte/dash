@@ -3,6 +3,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import { Helmet } from "react-helmet"
 import Footer from "./components/Footer"
 import AddTodo from "./containers/AddTodo"
 import VisibleTodoList from "./containers/VisibleTodoList"
@@ -43,12 +44,18 @@ const Home = () => (
 
 const About = () => (
 	<div>
+		<Helmet>
+			<title>About</title>
+		</Helmet>
 		<h2>About</h2>
 	</div>
 )
 
 const ReduxExample = () => (
 	<div>
+		<Helmet>
+			<title>Redux Example</title>
+		</Helmet>
 		<h2>Redux Example</h2>
 		<AddTodo />
 		<VisibleTodoList />
@@ -58,6 +65,9 @@ const ReduxExample = () => (
 
 const Topics = ({ match }) => (
 	<div>
+		<Helmet>
+			<title>Topics</title>
+		</Helmet>
 		<h2>Topics</h2>
 		<ul>
 			<li>
