@@ -7,6 +7,7 @@ import {
 	SET_VISIBILITY_FILTER,
 	VisibilityFilters,
 } from "../actions"
+import { rootReducer as usersReducer } from "../containers/Users/store"
 const { SHOW_ALL } = VisibilityFilters
 
 const visibilityFilter = (state = VisibilityFilters.SHOW_ALL, action) => {
@@ -44,6 +45,7 @@ const todos = (state = [], action) => {
 const todoApp = combineReducers({
 	visibilityFilter,
 	todos,
+	users: usersReducer,
 })
 
 export default todoApp

@@ -4,6 +4,11 @@
 
 - run `yarn start` and `yarn prettier-watch` separately
 
+## Guidelines
+
+- Always use constants for redux action names. Here's [why](https://stackoverflow.com/a/34966501/1418038).
+- 
+
 # Create React App stuff
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

@@ -14,7 +14,7 @@ const Footer = () => (
 			Completed
 		</FilterLink>
 		<hr />
-		<ActionButton>Async action</ActionButton>
+		<ActionButton>Async action (see console)</ActionButton>
 	</div>
 )
 

@@ -2,13 +2,16 @@
 
 import React from "react"
 import { connect } from "react-redux"
+import { bindActionCreators } from "redux"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import { Helmet } from "react-helmet"
 import Footer from "./components/Footer"
 import AddTodo from "./containers/AddTodo"
 import VisibleTodoList from "./containers/VisibleTodoList"
+import { actions as userActions } from "./containers/Users/store"
+import UsersContainer from "./containers/Users/"
 
-let BasicExample = () => (
+let BasicExample = ({ actions }) => (
 	<Router>
 		<div>
 			<ul>
@@ -22,6 +25,9 @@ let BasicExample = () => (
 					<Link to="/redux">Redux Example</Link>
 				</li>
 				<li>
+					<Link to="/users">Users</Link>
+				</li>
+				<li>
 					<Link to="/topics">Topics</Link>
 				</li>
 			</ul>
@@ -31,6 +37,7 @@ let BasicExample = () => (
 			<Route exact path="/" component={Home} />
 			<Route path="/about" component={About} />
 			<Route path="/redux" component={ReduxExample} />
+			<Route path="/Users" component={UsersContainer} />
 			<Route path="/topics" component={Topics} />
 		</div>
 	</Router>
@@ -96,8 +103,9 @@ const Topic = ({ match }) => (
 	</div>
 )
 
-BasicExample = connect(state => ({
-	hey: "ho",
-}))(BasicExample)
+BasicExample = connect(
+	state => ({}),
+	dispatch => ({})
+)(BasicExample)
 
 export default BasicExample
