@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet"
 import Footer from "./components/Footer"
 import Nav from "./components/Nav"
 import Dashboard from "./components/Dashboard"
+import Form from "./components/Form"
 import AddTodo from "./containers/AddTodo"
 import VisibleTodoList from "./containers/VisibleTodoList"
 import { actions as userActions } from "./containers/Users/store"
@@ -47,6 +48,7 @@ let BasicExample = ({ actions }) => (
 				</div>
 			</div>
 			<Dashboard />
+			<Form />
 		</div>
 	</Router>
 )
