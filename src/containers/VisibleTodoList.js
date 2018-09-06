@@ -1,9 +1,9 @@
 /** @format */
 
 import { connect } from "react-redux"
-import { toggleTodo } from "../actions"
+import { toggleTodo } from "../store/actions"
 import TodoList from "../components/TodoList"
-import { VisibilityFilters } from "../actions"
+import { VisibilityFilters } from "../store/actions"
 
 //
 // getVisibleTodos should become a selector

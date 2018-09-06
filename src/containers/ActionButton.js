@@ -2,7 +2,7 @@
 
 import { connect } from "react-redux"
 import Link from "../components/Link"
-import { asyncAction } from "../actions"
+import { asyncAction } from "../store/actions"
 
 const mapStateToProps = state => ({
 	active: false,

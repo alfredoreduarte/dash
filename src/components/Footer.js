@@ -3,7 +3,7 @@
 import React from "react"
 import FilterLink from "../containers/FilterLink"
 import ActionButton from "../containers/ActionButton"
-import { VisibilityFilters } from "../actions"
+import { VisibilityFilters } from "../store/actions"
 
 const Footer = () => (
 	<div>
