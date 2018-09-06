@@ -2,26 +2,21 @@
 
 import React from "react"
 
-const Form = ({ active, children, onClick }) => (
+const Form = () => (
 	<div className="content-wrapper">
 		<div className="container-fluid">
 			<div className="page-title mb-4 d-flex align-items-center">
 				<div className="mr-auto">
-					<h4 className="weight500 d-inline-block pr-3 mr-3 border-right">
-						Basic Form
-					</h4>
+					<h4 className="weight500 d-inline-block pr-3 mr-3 border-right">Basic Form</h4>
 					<nav aria-label="breadcrumb" className="d-inline-block ">
 						<ol className="breadcrumb p-0">
 							<li className="breadcrumb-item">
-								<a href="#">Home</a>
+								<a href="javascript:;">Home</a>
 							</li>
 							<li className="breadcrumb-item">
-								<a href="#">Form</a>
+								<a href="javascript:;">Form</a>
 							</li>
-							<li
-								className="breadcrumb-item active"
-								aria-current="page"
-							>
+							<li className="breadcrumb-item active" aria-current="page">
 								Basic Form
 							</li>
 						</ol>
@@ -29,9 +24,7 @@ const Form = ({ active, children, onClick }) => (
 				</div>
 
 				<div className="choose-form-tab d-inline-block">
-					<p className="text-muted mr-3 d-lg-inline-block f12">
-						Choose Style
-					</p>
+					<p className="text-muted mr-3 d-lg-inline-block f12">Choose Style</p>
 					<ul
 						className="nav nav-form-custom nav-form-sm float-right"
 						id="pills-tab"
@@ -143,21 +136,18 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-primary">
-										<div className="custom-title">
-											Basic Input
-										</div>
+										<div className="custom-title">Basic Input</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<p className="text-muted">
-										Here’s a quick example to demonstrate
-										Bootstrap’s form styles. Keep reading
-										for documentation on required classes,
+										Here’s a quick example to demonstrate Bootstrap’s form
+										styles. Keep reading for documentation on required classes,
 										form layout, and more.
 									</p>
 									<form>
 										<div className="form-group">
-											<label for="exampleInputEmail1">
+											<label htmlFor="exampleInputEmail1">
 												Email address
 											</label>
 											<input
@@ -167,18 +157,12 @@ const Form = ({ active, children, onClick }) => (
 												aria-describedby="emailHelp"
 												placeholder="Enter email"
 											/>
-											<small
-												id="emailHelp"
-												className="form-text text-muted"
-											>
-												We'll never share your email
-												with anyone else.
+											<small id="emailHelp" className="form-text text-muted">
+												We'll never share your email with anyone else.
 											</small>
 										</div>
 										<div className="form-group">
-											<label for="exampleInputPassword1">
-												Password
-											</label>
+											<label htmlFor="exampleInputPassword1">Password</label>
 											<input
 												type="password"
 												className="form-control"
@@ -194,16 +178,13 @@ const Form = ({ active, children, onClick }) => (
 											/>
 											<label
 												className="form-check-label"
-												for="exampleCheck1"
+												htmlFor="exampleCheck1"
 											>
 												Check me out
 											</label>
 										</div>
 										<div className="text-center">
-											<button
-												type="submit"
-												className="btn btn-purple"
-											>
+											<button type="submit" className="btn btn-purple">
 												Submit
 											</button>
 											<button
@@ -220,21 +201,15 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-danger">
-										<div className="custom-title">
-											Sizing
-										</div>
+										<div className="custom-title">Sizing</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<p className="text-muted">
 										Set heights using classes like{" "}
-										<code className="highlighter-rouge">
-											.form-control-lg
-										</code>{" "}
+										<code className="highlighter-rouge">.form-control-lg</code>{" "}
 										and{" "}
-										<code className="highlighter-rouge">
-											.form-control-sm
-										</code>.
+										<code className="highlighter-rouge">.form-control-sm</code>.
 									</p>
 
 									<div className="form-group">
@@ -287,16 +262,14 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-warning">
-										<div className="custom-title">
-											Form Horizontal
-										</div>
+										<div className="custom-title">Form Horizontal</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<form>
 										<div className="form-group row">
 											<label
-												for="inputEmail3"
+												htmlFor="inputEmail3"
 												className="col-sm-3 col-form-label"
 											>
 												Email
@@ -312,7 +285,7 @@ const Form = ({ active, children, onClick }) => (
 										</div>
 										<div className="form-group row">
 											<label
-												for="inputPassword3"
+												htmlFor="inputPassword3"
 												className="col-sm-3 col-form-label"
 											>
 												Password
@@ -328,9 +301,7 @@ const Form = ({ active, children, onClick }) => (
 										</div>
 										<fieldset className="form-group">
 											<div className="row">
-												<div className="col-sm-3">
-													Radios
-												</div>
+												<div className="col-sm-3">Radios</div>
 												<div className="col-sm-9">
 													<div className="form-check">
 														<label className="form-check-label">
@@ -342,10 +313,8 @@ const Form = ({ active, children, onClick }) => (
 																value="option1"
 																checked=""
 															/>
-															Option one is this
-															and that—be sure to
-															include why it's
-															great
+															Option one is this and that—be sure to
+															include why it's great
 														</label>
 													</div>
 													<div className="form-check">
@@ -357,10 +326,8 @@ const Form = ({ active, children, onClick }) => (
 																id="gridRadios2"
 																value="option2"
 															/>
-															Option two can be
-															something else and
-															selecting it will
-															deselect option one
+															Option two can be something else and
+															selecting it will deselect option one
 														</label>
 													</div>
 													<div className="form-check disabled">
@@ -373,17 +340,14 @@ const Form = ({ active, children, onClick }) => (
 																value="option3"
 																disabled=""
 															/>
-															Option three is
-															disabled
+															Option three is disabled
 														</label>
 													</div>
 												</div>
 											</div>
 										</fieldset>
 										<div className="form-group row">
-											<div className="col-sm-3">
-												Checkbox
-											</div>
+											<div className="col-sm-3">Checkbox</div>
 											<div className="col-sm-9">
 												<div className="form-check">
 													<label className="form-check-label">
@@ -398,10 +362,7 @@ const Form = ({ active, children, onClick }) => (
 										</div>
 										<div className="form-group row">
 											<div className="col-sm-12 text-center">
-												<button
-													type="submit"
-													className="btn btn-primary"
-												>
+												<button type="submit" className="btn btn-primary">
 													Submit
 												</button>
 											</div>
@@ -413,15 +374,13 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-success">
-										<div className="custom-title">
-											Form controls
-										</div>
+										<div className="custom-title">Form controls</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<form>
 										<div className="form-group">
-											<label for="exampleFormControlInput1">
+											<label htmlFor="exampleFormControlInput1">
 												Email address
 											</label>
 											<input
@@ -432,7 +391,7 @@ const Form = ({ active, children, onClick }) => (
 											/>
 										</div>
 										<div className="form-group">
-											<label for="exampleFormControlSelect1">
+											<label htmlFor="exampleFormControlSelect1">
 												Example select
 											</label>
 											<select
@@ -447,7 +406,7 @@ const Form = ({ active, children, onClick }) => (
 											</select>
 										</div>
 										<div className="form-group">
-											<label for="exampleFormControlSelect2">
+											<label htmlFor="exampleFormControlSelect2">
 												Example multiple select
 											</label>
 											<select
@@ -463,7 +422,7 @@ const Form = ({ active, children, onClick }) => (
 											</select>
 										</div>
 										<div className="form-group">
-											<label for="exampleFormControlTextarea1">
+											<label htmlFor="exampleFormControlTextarea1">
 												Example textarea
 											</label>
 											<textarea
@@ -479,9 +438,7 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-info">
-										<div className="custom-title">
-											Column sizing
-										</div>
+										<div className="custom-title">Column sizing</div>
 									</div>
 								</div>
 								<div className="card-body">
@@ -526,21 +483,18 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-primary">
-										<div className="custom-title">
-											Basic Input Square
-										</div>
+										<div className="custom-title">Basic Input Square</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<p className="text-muted">
-										Here’s a quick example to demonstrate
-										Bootstrap’s form styles. Keep reading
-										for documentation on required classes,
+										Here’s a quick example to demonstrate Bootstrap’s form
+										styles. Keep reading for documentation on required classes,
 										form layout, and more.
 									</p>
 									<form>
 										<div className="form-group">
-											<label for="exampleInputEmail11">
+											<label htmlFor="exampleInputEmail11">
 												Email address
 											</label>
 											<input
@@ -550,18 +504,12 @@ const Form = ({ active, children, onClick }) => (
 												aria-describedby="emailHelp1"
 												placeholder="Enter email"
 											/>
-											<small
-												id="emailHelp1"
-												className="form-text text-muted"
-											>
-												We'll never share your email
-												with anyone else.
+											<small id="emailHelp1" className="form-text text-muted">
+												We'll never share your email with anyone else.
 											</small>
 										</div>
 										<div className="form-group">
-											<label for="exampleInputPassword11">
-												Password
-											</label>
+											<label htmlFor="exampleInputPassword11">Password</label>
 											<input
 												type="password"
 												className="form-control rounded-0"
@@ -577,7 +525,7 @@ const Form = ({ active, children, onClick }) => (
 											/>
 											<label
 												className="form-check-label"
-												for="exampleCheck11"
+												htmlFor="exampleCheck11"
 											>
 												Check me out
 											</label>
@@ -603,21 +551,15 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-danger">
-										<div className="custom-title">
-											Sizing Square
-										</div>
+										<div className="custom-title">Sizing Square</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<p className="text-muted">
 										Set heights using classes like{" "}
-										<code className="highlighter-rouge">
-											.form-control-lg
-										</code>{" "}
+										<code className="highlighter-rouge">.form-control-lg</code>{" "}
 										and{" "}
-										<code className="highlighter-rouge">
-											.form-control-sm
-										</code>.
+										<code className="highlighter-rouge">.form-control-sm</code>.
 									</p>
 
 									<div className="form-group">
@@ -670,16 +612,14 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-warning">
-										<div className="custom-title">
-											Form Horizontal Square
-										</div>
+										<div className="custom-title">Form Horizontal Square</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<form>
 										<div className="form-group row">
 											<label
-												for="inputEmail31"
+												htmlFor="inputEmail31"
 												className="col-sm-3 col-form-label"
 											>
 												Email
@@ -695,7 +635,7 @@ const Form = ({ active, children, onClick }) => (
 										</div>
 										<div className="form-group row">
 											<label
-												for="inputPassword31"
+												htmlFor="inputPassword31"
 												className="col-sm-3 col-form-label"
 											>
 												Password
@@ -711,9 +651,7 @@ const Form = ({ active, children, onClick }) => (
 										</div>
 										<fieldset className="form-group">
 											<div className="row">
-												<div className="col-sm-3">
-													Radios
-												</div>
+												<div className="col-sm-3">Radios</div>
 												<div className="col-sm-9">
 													<div className="form-check">
 														<label className="form-check-label">
@@ -725,10 +663,8 @@ const Form = ({ active, children, onClick }) => (
 																value="option1"
 																checked=""
 															/>
-															Option one is this
-															and that—be sure to
-															include why it's
-															great
+															Option one is this and that—be sure to
+															include why it's great
 														</label>
 													</div>
 													<div className="form-check">
@@ -740,10 +676,8 @@ const Form = ({ active, children, onClick }) => (
 																id="gridRadios21"
 																value="option2"
 															/>
-															Option two can be
-															something else and
-															selecting it will
-															deselect option one
+															Option two can be something else and
+															selecting it will deselect option one
 														</label>
 													</div>
 													<div className="form-check disabled">
@@ -756,17 +690,14 @@ const Form = ({ active, children, onClick }) => (
 																value="option3"
 																disabled=""
 															/>
-															Option three is
-															disabled
+															Option three is disabled
 														</label>
 													</div>
 												</div>
 											</div>
 										</fieldset>
 										<div className="form-group row">
-											<div className="col-sm-3">
-												Checkbox
-											</div>
+											<div className="col-sm-3">Checkbox</div>
 											<div className="col-sm-9">
 												<div className="form-check">
 													<label className="form-check-label">
@@ -796,15 +727,13 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-success">
-										<div className="custom-title">
-											Form controls Square
-										</div>
+										<div className="custom-title">Form controls Square</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<form>
 										<div className="form-group">
-											<label for="exampleFormControlInput11">
+											<label htmlFor="exampleFormControlInput11">
 												Email address
 											</label>
 											<input
@@ -815,7 +744,7 @@ const Form = ({ active, children, onClick }) => (
 											/>
 										</div>
 										<div className="form-group">
-											<label for="exampleFormControlSelect11">
+											<label htmlFor="exampleFormControlSelect11">
 												Example select
 											</label>
 											<select
@@ -830,7 +759,7 @@ const Form = ({ active, children, onClick }) => (
 											</select>
 										</div>
 										<div className="form-group">
-											<label for="exampleFormControlSelect21">
+											<label htmlFor="exampleFormControlSelect21">
 												Example multiple select
 											</label>
 											<select
@@ -846,7 +775,7 @@ const Form = ({ active, children, onClick }) => (
 											</select>
 										</div>
 										<div className="form-group">
-											<label for="exampleFormControlTextarea11">
+											<label htmlFor="exampleFormControlTextarea11">
 												Example textarea
 											</label>
 											<textarea
@@ -862,9 +791,7 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-info">
-										<div className="custom-title">
-											Column sizing Square
-										</div>
+										<div className="custom-title">Column sizing Square</div>
 									</div>
 								</div>
 								<div className="card-body">
@@ -909,21 +836,18 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-primary">
-										<div className="custom-title">
-											Basic Input Fill
-										</div>
+										<div className="custom-title">Basic Input Fill</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<p className="text-muted">
-										Here’s a quick example to demonstrate
-										Bootstrap’s form styles. Keep reading
-										for documentation on required classes,
+										Here’s a quick example to demonstrate Bootstrap’s form
+										styles. Keep reading for documentation on required classes,
 										form layout, and more.
 									</p>
 									<form>
 										<div className="form-group">
-											<label for="exampleInputEmail12">
+											<label htmlFor="exampleInputEmail12">
 												Email address
 											</label>
 											<input
@@ -933,18 +857,12 @@ const Form = ({ active, children, onClick }) => (
 												aria-describedby="emailHelp2"
 												placeholder="Enter email"
 											/>
-											<small
-												id="emailHelp2"
-												className="form-text text-muted"
-											>
-												We'll never share your email
-												with anyone else.
+											<small id="emailHelp2" className="form-text text-muted">
+												We'll never share your email with anyone else.
 											</small>
 										</div>
 										<div className="form-group">
-											<label for="exampleInputPassword12">
-												Password
-											</label>
+											<label htmlFor="exampleInputPassword12">Password</label>
 											<input
 												type="password"
 												className="form-control form-fill"
@@ -960,16 +878,13 @@ const Form = ({ active, children, onClick }) => (
 											/>
 											<label
 												className="form-check-label"
-												for="exampleCheck12"
+												htmlFor="exampleCheck12"
 											>
 												Check me out
 											</label>
 										</div>
 										<div className="text-center">
-											<button
-												type="submit"
-												className="btn btn-purple"
-											>
+											<button type="submit" className="btn btn-purple">
 												Submit
 											</button>
 											<button
@@ -986,21 +901,15 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-danger">
-										<div className="custom-title">
-											Sizing Fill
-										</div>
+										<div className="custom-title">Sizing Fill</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<p className="text-muted">
 										Set heights using classes like{" "}
-										<code className="highlighter-rouge">
-											.form-control-lg
-										</code>{" "}
+										<code className="highlighter-rouge">.form-control-lg</code>{" "}
 										and{" "}
-										<code className="highlighter-rouge">
-											.form-control-sm
-										</code>.
+										<code className="highlighter-rouge">.form-control-sm</code>.
 									</p>
 
 									<div className="form-group">
@@ -1053,16 +962,14 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-warning">
-										<div className="custom-title">
-											Form Horizontal Fill
-										</div>
+										<div className="custom-title">Form Horizontal Fill</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<form>
 										<div className="form-group row">
 											<label
-												for="inputEmail32"
+												htmlFor="inputEmail32"
 												className="col-sm-3 col-form-label"
 											>
 												Email
@@ -1078,7 +985,7 @@ const Form = ({ active, children, onClick }) => (
 										</div>
 										<div className="form-group row">
 											<label
-												for="inputPassword32"
+												htmlFor="inputPassword32"
 												className="col-sm-3 col-form-label"
 											>
 												Password
@@ -1094,9 +1001,7 @@ const Form = ({ active, children, onClick }) => (
 										</div>
 										<fieldset className="form-group">
 											<div className="row">
-												<div className="col-sm-3">
-													Radios
-												</div>
+												<div className="col-sm-3">Radios</div>
 												<div className="col-sm-9">
 													<div className="form-check">
 														<label className="form-check-label">
@@ -1108,10 +1013,8 @@ const Form = ({ active, children, onClick }) => (
 																value="option1"
 																checked=""
 															/>
-															Option one is this
-															and that—be sure to
-															include why it's
-															great
+															Option one is this and that—be sure to
+															include why it's great
 														</label>
 													</div>
 													<div className="form-check">
@@ -1123,10 +1026,8 @@ const Form = ({ active, children, onClick }) => (
 																id="gridRadios22"
 																value="option2"
 															/>
-															Option two can be
-															something else and
-															selecting it will
-															deselect option one
+															Option two can be something else and
+															selecting it will deselect option one
 														</label>
 													</div>
 													<div className="form-check disabled">
@@ -1139,17 +1040,14 @@ const Form = ({ active, children, onClick }) => (
 																value="option3"
 																disabled=""
 															/>
-															Option three is
-															disabled
+															Option three is disabled
 														</label>
 													</div>
 												</div>
 											</div>
 										</fieldset>
 										<div className="form-group row">
-											<div className="col-sm-3">
-												Checkbox
-											</div>
+											<div className="col-sm-3">Checkbox</div>
 											<div className="col-sm-9">
 												<div className="form-check">
 													<label className="form-check-label">
@@ -1164,10 +1062,7 @@ const Form = ({ active, children, onClick }) => (
 										</div>
 										<div className="form-group row">
 											<div className="col-sm-12 text-center">
-												<button
-													type="submit"
-													className="btn btn-primary"
-												>
+												<button type="submit" className="btn btn-primary">
 													Submit
 												</button>
 											</div>
@@ -1179,15 +1074,13 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-success">
-										<div className="custom-title">
-											Form controls
-										</div>
+										<div className="custom-title">Form controls</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<form>
 										<div className="form-group">
-											<label for="exampleFormControlInput12">
+											<label htmlFor="exampleFormControlInput12">
 												Email address
 											</label>
 											<input
@@ -1198,7 +1091,7 @@ const Form = ({ active, children, onClick }) => (
 											/>
 										</div>
 										<div className="form-group">
-											<label for="exampleFormControlSelect12">
+											<label htmlFor="exampleFormControlSelect12">
 												Example select
 											</label>
 											<select
@@ -1213,7 +1106,7 @@ const Form = ({ active, children, onClick }) => (
 											</select>
 										</div>
 										<div className="form-group">
-											<label for="exampleFormControlSelect22">
+											<label htmlFor="exampleFormControlSelect22">
 												Example multiple select
 											</label>
 											<select
@@ -1229,7 +1122,7 @@ const Form = ({ active, children, onClick }) => (
 											</select>
 										</div>
 										<div className="form-group">
-											<label for="exampleFormControlTextarea12">
+											<label htmlFor="exampleFormControlTextarea12">
 												Example textarea
 											</label>
 											<textarea
@@ -1245,9 +1138,7 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-info">
-										<div className="custom-title">
-											Column sizing
-										</div>
+										<div className="custom-title">Column sizing</div>
 									</div>
 								</div>
 								<div className="card-body">
@@ -1292,21 +1183,18 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-primary">
-										<div className="custom-title">
-											Basic Input Pill
-										</div>
+										<div className="custom-title">Basic Input Pill</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<p className="text-muted">
-										Here’s a quick example to demonstrate
-										Bootstrap’s form styles. Keep reading
-										for documentation on required classes,
+										Here’s a quick example to demonstrate Bootstrap’s form
+										styles. Keep reading for documentation on required classes,
 										form layout, and more.
 									</p>
 									<form>
 										<div className="form-group">
-											<label for="exampleInputEmail13">
+											<label htmlFor="exampleInputEmail13">
 												Email address
 											</label>
 											<input
@@ -1316,18 +1204,12 @@ const Form = ({ active, children, onClick }) => (
 												aria-describedby="emailHelp3"
 												placeholder="Enter email"
 											/>
-											<small
-												id="emailHelp3"
-												className="form-text text-muted"
-											>
-												We'll never share your email
-												with anyone else.
+											<small id="emailHelp3" className="form-text text-muted">
+												We'll never share your email with anyone else.
 											</small>
 										</div>
 										<div className="form-group">
-											<label for="exampleInputPassword13">
-												Password
-											</label>
+											<label htmlFor="exampleInputPassword13">Password</label>
 											<input
 												type="password"
 												className="form-control form-pill"
@@ -1343,16 +1225,13 @@ const Form = ({ active, children, onClick }) => (
 											/>
 											<label
 												className="form-check-label"
-												for="exampleCheck13"
+												htmlFor="exampleCheck13"
 											>
 												Check me out
 											</label>
 										</div>
 										<div className="text-center">
-											<button
-												type="submit"
-												className="btn btn-purple"
-											>
+											<button type="submit" className="btn btn-purple">
 												Submit
 											</button>
 											<button
@@ -1369,21 +1248,15 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-danger">
-										<div className="custom-title">
-											Sizing Pill
-										</div>
+										<div className="custom-title">Sizing Pill</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<p className="text-muted">
 										Set heights using classes like{" "}
-										<code className="highlighter-rouge">
-											.form-control-lg
-										</code>{" "}
+										<code className="highlighter-rouge">.form-control-lg</code>{" "}
 										and{" "}
-										<code className="highlighter-rouge">
-											.form-control-sm
-										</code>.
+										<code className="highlighter-rouge">.form-control-sm</code>.
 									</p>
 
 									<div className="form-group">
@@ -1436,16 +1309,14 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-warning">
-										<div className="custom-title">
-											Form Horizontal Pill
-										</div>
+										<div className="custom-title">Form Horizontal Pill</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<form>
 										<div className="form-group row">
 											<label
-												for="inputEmail33"
+												htmlFor="inputEmail33"
 												className="col-sm-3 col-form-label"
 											>
 												Email
@@ -1461,7 +1332,7 @@ const Form = ({ active, children, onClick }) => (
 										</div>
 										<div className="form-group row">
 											<label
-												for="inputPassword33"
+												htmlFor="inputPassword33"
 												className="col-sm-3 col-form-label"
 											>
 												Password
@@ -1477,9 +1348,7 @@ const Form = ({ active, children, onClick }) => (
 										</div>
 										<fieldset className="form-group">
 											<div className="row">
-												<div className="col-sm-3">
-													Radios
-												</div>
+												<div className="col-sm-3">Radios</div>
 												<div className="col-sm-9">
 													<div className="form-check">
 														<label className="form-check-label">
@@ -1491,10 +1360,8 @@ const Form = ({ active, children, onClick }) => (
 																value="option1"
 																checked=""
 															/>
-															Option one is this
-															and that—be sure to
-															include why it's
-															great
+															Option one is this and that—be sure to
+															include why it's great
 														</label>
 													</div>
 													<div className="form-check">
@@ -1506,10 +1373,8 @@ const Form = ({ active, children, onClick }) => (
 																id="gridRadios23"
 																value="option2"
 															/>
-															Option two can be
-															something else and
-															selecting it will
-															deselect option one
+															Option two can be something else and
+															selecting it will deselect option one
 														</label>
 													</div>
 													<div className="form-check disabled">
@@ -1522,17 +1387,14 @@ const Form = ({ active, children, onClick }) => (
 																value="option3"
 																disabled=""
 															/>
-															Option three is
-															disabled
+															Option three is disabled
 														</label>
 													</div>
 												</div>
 											</div>
 										</fieldset>
 										<div className="form-group row">
-											<div className="col-sm-3">
-												Checkbox
-											</div>
+											<div className="col-sm-3">Checkbox</div>
 											<div className="col-sm-9">
 												<div className="form-check">
 													<label className="form-check-label">
@@ -1547,10 +1409,7 @@ const Form = ({ active, children, onClick }) => (
 										</div>
 										<div className="form-group row">
 											<div className="col-sm-12 text-center">
-												<button
-													type="submit"
-													className="btn btn-primary"
-												>
+												<button type="submit" className="btn btn-primary">
 													Submit
 												</button>
 											</div>
@@ -1562,15 +1421,13 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-success">
-										<div className="custom-title">
-											Form controls Pill
-										</div>
+										<div className="custom-title">Form controls Pill</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<form>
 										<div className="form-group">
-											<label for="exampleFormControlInput13">
+											<label htmlFor="exampleFormControlInput13">
 												Email address
 											</label>
 											<input
@@ -1581,7 +1438,7 @@ const Form = ({ active, children, onClick }) => (
 											/>
 										</div>
 										<div className="form-group">
-											<label for="exampleFormControlSelect13">
+											<label htmlFor="exampleFormControlSelect13">
 												Example select
 											</label>
 											<select
@@ -1596,7 +1453,7 @@ const Form = ({ active, children, onClick }) => (
 											</select>
 										</div>
 										<div className="form-group">
-											<label for="exampleFormControlSelect23">
+											<label htmlFor="exampleFormControlSelect23">
 												Example multiple select
 											</label>
 											<select
@@ -1612,7 +1469,7 @@ const Form = ({ active, children, onClick }) => (
 											</select>
 										</div>
 										<div className="form-group">
-											<label for="exampleFormControlTextarea13">
+											<label htmlFor="exampleFormControlTextarea13">
 												Example textarea
 											</label>
 											<textarea
@@ -1628,9 +1485,7 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-info">
-										<div className="custom-title">
-											Column sizing Pill
-										</div>
+										<div className="custom-title">Column sizing Pill</div>
 									</div>
 								</div>
 								<div className="card-body">
@@ -1675,21 +1530,18 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-primary">
-										<div className="custom-title">
-											Basic Input Shadow
-										</div>
+										<div className="custom-title">Basic Input Shadow</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<p className="text-muted">
-										Here’s a quick example to demonstrate
-										Bootstrap’s form styles. Keep reading
-										for documentation on required classes,
+										Here’s a quick example to demonstrate Bootstrap’s form
+										styles. Keep reading for documentation on required classes,
 										form layout, and more.
 									</p>
 									<form>
 										<div className="form-group">
-											<label for="exampleInputEmail14">
+											<label htmlFor="exampleInputEmail14">
 												Email address
 											</label>
 											<input
@@ -1699,18 +1551,12 @@ const Form = ({ active, children, onClick }) => (
 												aria-describedby="emailHelp4"
 												placeholder="Enter email"
 											/>
-											<small
-												id="emailHelp4"
-												className="form-text text-muted"
-											>
-												We'll never share your email
-												with anyone else.
+											<small id="emailHelp4" className="form-text text-muted">
+												We'll never share your email with anyone else.
 											</small>
 										</div>
 										<div className="form-group">
-											<label for="exampleInputPassword14">
-												Password
-											</label>
+											<label htmlFor="exampleInputPassword14">Password</label>
 											<input
 												type="password"
 												className="form-control form-shadow"
@@ -1726,16 +1572,13 @@ const Form = ({ active, children, onClick }) => (
 											/>
 											<label
 												className="form-check-label"
-												for="exampleCheck14"
+												htmlFor="exampleCheck14"
 											>
 												Check me out
 											</label>
 										</div>
 										<div className="text-center">
-											<button
-												type="submit"
-												className="btn btn-purple"
-											>
+											<button type="submit" className="btn btn-purple">
 												Submit
 											</button>
 											<button
@@ -1752,21 +1595,15 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-danger">
-										<div className="custom-title">
-											Sizing Shadow
-										</div>
+										<div className="custom-title">Sizing Shadow</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<p className="text-muted">
 										Set heights using classes like{" "}
-										<code className="highlighter-rouge">
-											.form-control-lg
-										</code>{" "}
+										<code className="highlighter-rouge">.form-control-lg</code>{" "}
 										and{" "}
-										<code className="highlighter-rouge">
-											.form-control-sm
-										</code>.
+										<code className="highlighter-rouge">.form-control-sm</code>.
 									</p>
 
 									<div className="form-group">
@@ -1819,16 +1656,14 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-warning">
-										<div className="custom-title">
-											Form Horizontal Shadow
-										</div>
+										<div className="custom-title">Form Horizontal Shadow</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<form>
 										<div className="form-group row">
 											<label
-												for="inputEmail34"
+												htmlFor="inputEmail34"
 												className="col-sm-3 col-form-label"
 											>
 												Email
@@ -1844,7 +1679,7 @@ const Form = ({ active, children, onClick }) => (
 										</div>
 										<div className="form-group row">
 											<label
-												for="inputPassword34"
+												htmlFor="inputPassword34"
 												className="col-sm-3 col-form-label"
 											>
 												Password
@@ -1860,9 +1695,7 @@ const Form = ({ active, children, onClick }) => (
 										</div>
 										<fieldset className="form-group">
 											<div className="row">
-												<div className="col-sm-3">
-													Radios
-												</div>
+												<div className="col-sm-3">Radios</div>
 												<div className="col-sm-9">
 													<div className="form-check">
 														<label className="form-check-label">
@@ -1874,10 +1707,8 @@ const Form = ({ active, children, onClick }) => (
 																value="option1"
 																checked=""
 															/>
-															Option one is this
-															and that—be sure to
-															include why it's
-															great
+															Option one is this and that—be sure to
+															include why it's great
 														</label>
 													</div>
 													<div className="form-check">
@@ -1889,10 +1720,8 @@ const Form = ({ active, children, onClick }) => (
 																id="gridRadios24"
 																value="option2"
 															/>
-															Option two can be
-															something else and
-															selecting it will
-															deselect option one
+															Option two can be something else and
+															selecting it will deselect option one
 														</label>
 													</div>
 													<div className="form-check disabled">
@@ -1905,17 +1734,14 @@ const Form = ({ active, children, onClick }) => (
 																value="option3"
 																disabled=""
 															/>
-															Option three is
-															disabled
+															Option three is disabled
 														</label>
 													</div>
 												</div>
 											</div>
 										</fieldset>
 										<div className="form-group row">
-											<div className="col-sm-3">
-												Checkbox
-											</div>
+											<div className="col-sm-3">Checkbox</div>
 											<div className="col-sm-9">
 												<div className="form-check">
 													<label className="form-check-label">
@@ -1930,10 +1756,7 @@ const Form = ({ active, children, onClick }) => (
 										</div>
 										<div className="form-group row">
 											<div className="col-sm-12 text-center">
-												<button
-													type="submit"
-													className="btn btn-primary"
-												>
+												<button type="submit" className="btn btn-primary">
 													Submit
 												</button>
 											</div>
@@ -1945,15 +1768,13 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-success">
-										<div className="custom-title">
-											Form controls Shadow
-										</div>
+										<div className="custom-title">Form controls Shadow</div>
 									</div>
 								</div>
 								<div className="card-body">
 									<form>
 										<div className="form-group">
-											<label for="exampleFormControlInput14">
+											<label htmlFor="exampleFormControlInput14">
 												Email address
 											</label>
 											<input
@@ -1964,7 +1785,7 @@ const Form = ({ active, children, onClick }) => (
 											/>
 										</div>
 										<div className="form-group">
-											<label for="exampleFormControlSelect14">
+											<label htmlFor="exampleFormControlSelect14">
 												Example select
 											</label>
 											<select
@@ -1979,7 +1800,7 @@ const Form = ({ active, children, onClick }) => (
 											</select>
 										</div>
 										<div className="form-group">
-											<label for="exampleFormControlSelect24">
+											<label htmlFor="exampleFormControlSelect24">
 												Example multiple select
 											</label>
 											<select
@@ -1995,7 +1816,7 @@ const Form = ({ active, children, onClick }) => (
 											</select>
 										</div>
 										<div className="form-group">
-											<label for="exampleFormControlTextarea14">
+											<label htmlFor="exampleFormControlTextarea14">
 												Example textarea
 											</label>
 											<textarea
@@ -2011,9 +1832,7 @@ const Form = ({ active, children, onClick }) => (
 							<div className="card card-shadow mb-4">
 								<div className="card-header border-0">
 									<div className="custom-title-wrap bar-info">
-										<div className="custom-title">
-											Column sizing Shadow
-										</div>
+										<div className="custom-title">Column sizing Shadow</div>
 									</div>
 								</div>
 								<div className="card-body">

@@ -2,7 +2,6 @@
 
 import React from "react"
 import { connect } from "react-redux"
-import { bindActionCreators } from "redux"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import { Helmet } from "react-helmet"
 import Footer from "./components/Footer"
@@ -11,8 +10,9 @@ import Dashboard from "./components/Dashboard"
 import Form from "./components/Form"
 import AddTodo from "./containers/AddTodo"
 import VisibleTodoList from "./containers/VisibleTodoList"
-import { actions as userActions } from "./containers/Users/store"
-import UsersContainer from "./containers/Users/"
+
+import Home from "./routes/Home"
+import Users from "./Users/routes"
 
 let BasicExample = ({ actions }) => (
 	<Router>
@@ -20,52 +20,14 @@ let BasicExample = ({ actions }) => (
 			<Nav />
 			<div className="content-wrapper">
 				<div className="container-fluid">
-					<ul>
-						<li>
-							<Link to="/">Home</Link>
-						</li>
-						<li>
-							<Link to="/about">About</Link>
-						</li>
-						<li>
-							<Link to="/redux">Redux Example</Link>
-						</li>
-						<li>
-							<Link to="/users">Users</Link>
-						</li>
-						<li>
-							<Link to="/topics">Topics</Link>
-						</li>
-					</ul>
-
-					<hr />
-
 					<Route exact path="/" component={Home} />
-					<Route path="/about" component={About} />
+					<Route path="/users" component={Users} />
 					<Route path="/redux" component={ReduxExample} />
-					<Route path="/Users" component={UsersContainer} />
 					<Route path="/topics" component={Topics} />
 				</div>
 			</div>
-			<Dashboard />
-			<Form />
 		</div>
 	</Router>
-)
-
-const Home = () => (
-	<div>
-		<h2>Home</h2>
-	</div>
-)
-
-const About = () => (
-	<div>
-		<Helmet>
-			<title>About</title>
-		</Helmet>
-		<h2>About</h2>
-	</div>
 )
 
 const ReduxExample = () => (
@@ -73,6 +35,9 @@ const ReduxExample = () => (
 		<Helmet>
 			<title>Redux Example</title>
 		</Helmet>
+		<p>
+			<Link to="/">Back</Link>
+		</p>
 		<h2>Redux Example</h2>
 		<AddTodo />
 		<VisibleTodoList />
@@ -85,7 +50,12 @@ const Topics = ({ match }) => (
 		<Helmet>
 			<title>Topics</title>
 		</Helmet>
-		<h2>Topics</h2>
+		<p>
+			<Link to="/">Back</Link>
+		</p>
+		<h2>
+			Topics <small>React-router demo</small>
+		</h2>
 		<ul>
 			<li>
 				<Link to={`${match.url}/rendering`}>Rendering with React</Link>
@@ -99,11 +69,7 @@ const Topics = ({ match }) => (
 		</ul>
 
 		<Route path={`${match.url}/:topicId`} component={Topic} />
-		<Route
-			exact
-			path={match.url}
-			render={() => <h3>Please select a topic.</h3>}
-		/>
+		<Route exact path={match.url} render={() => <h3>Please select a topic.</h3>} />
 	</div>
 )
 

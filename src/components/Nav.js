@@ -2,9 +2,9 @@
 
 import React from "react"
 
-const Nav = ({ active, children, onClick }) => (
+const Nav = () => (
 	<nav className="navbar navbar-expand-lg fixed-top navbar-dark" id="mainNav">
-		<a className="navbar-brand" href="#" data-jq-dropdown="#jq-dropdown-1">
+		<a className="navbar-brand" href="javascript:;" data-jq-dropdown="#jq-dropdown-1">
 			<img
 				className="pr-3 float-left"
 				src="/images/logo-icon.png"
@@ -13,7 +13,7 @@ const Nav = ({ active, children, onClick }) => (
 			/>
 			<div className="float-left">
 				<div>
-					DashLab <i className="fa fa-caret-down pl-2" />
+					Dash <i className="fa fa-caret-down pl-2" />
 				</div>
 				<span className="page-direction f12 weight300">
 					<span>home</span>
@@ -35,7 +35,7 @@ const Nav = ({ active, children, onClick }) => (
 								alt=""
 							/>
 							<div className="float-left">
-								<div>DashLab</div>
+								<div>Dash</div>
 								<span className="page-direction f12 weight300">
 									<span>home</span>
 									<i className="fa fa-angle-right" />
@@ -45,11 +45,7 @@ const Nav = ({ active, children, onClick }) => (
 						</div>
 
 						<div className="widget-action-link">
-							<ul
-								className="nav nav-tabs wal-nav-tabs"
-								id="myTab"
-								role="tablist"
-							>
+							<ul className="nav nav-tabs wal-nav-tabs" id="myTab" role="tablist">
 								<li className="nav-item">
 									<a
 										className="nav-link active"
@@ -117,8 +113,7 @@ const Nav = ({ active, children, onClick }) => (
 												aria-controls="v-pills-home"
 												aria-selected="true"
 											>
-												<i className="fa fa-home pr-2" />{" "}
-												Application
+												<i className="fa fa-home pr-2" /> Application
 											</a>
 											<a
 												className="nav-link"
@@ -129,8 +124,7 @@ const Nav = ({ active, children, onClick }) => (
 												aria-controls="v-pills-report"
 												aria-selected="false"
 											>
-												<i className="fa fa-desktop pr-2" />{" "}
-												Reports
+												<i className="fa fa-desktop pr-2" /> Reports
 											</a>
 											<a
 												className="nav-link"
@@ -157,10 +151,7 @@ const Nav = ({ active, children, onClick }) => (
 										</div>
 									</div>
 									<div className="col-8">
-										<div
-											className="tab-content"
-											id="v-pills-tabContent"
-										>
+										<div className="tab-content" id="v-pills-tabContent">
 											<div
 												className="tab-pane fade show active"
 												id="v-pills-home"
@@ -169,36 +160,30 @@ const Nav = ({ active, children, onClick }) => (
 											>
 												<ul className="list-unstyled b-mega-menu-link">
 													<li>
-														<a href="#">
+														<a href="javascript:;">
 															Bootstrap 4 Stable
 														</a>
 													</li>
 													<li className="active">
+														<a href="javascript:;">Dash Modern Admin</a>
+													</li>
+													<li>
 														<a href="javascript:;">
-															DashLab Modern Admin
+															Awesome Widgets Collection
 														</a>
 													</li>
 													<li>
-														<a href="#">
-															Awesome Widgets
-															Collection
+														<a href="javascript:;">
+															Developer Friendly Code
 														</a>
 													</li>
 													<li>
-														<a href="#">
-															Developer Friendly
-															Code
-														</a>
-													</li>
-													<li>
-														<a href="#">
+														<a href="javascript:;">
 															SASS and GULP Task
 														</a>
 													</li>
 													<li>
-														<a href="#">
-															Fully Responsive
-														</a>
+														<a href="javascript:;">Fully Responsive</a>
 													</li>
 												</ul>
 											</div>
@@ -210,44 +195,28 @@ const Nav = ({ active, children, onClick }) => (
 											>
 												<ul className="list-unstyled b-mega-menu-link">
 													<li>
-														<a href="#">
-															Daily Reports
-														</a>
+														<a href="javascript:;">Daily Reports</a>
 													</li>
 													<li>
-														<a href="javascript:;">
-															Weekly Reports
-														</a>
+														<a href="javascript:;">Weekly Reports</a>
 													</li>
 													<li className="active">
-														<a href="#">
-															Monthly Reports
-														</a>
+														<a href="javascript:;">Monthly Reports</a>
 													</li>
 													<li>
-														<a href="#">
-															Yearly Reports
-														</a>
+														<a href="javascript:;">Yearly Reports</a>
 													</li>
 													<li>
-														<a href="#">
-															HR Reports
-														</a>
+														<a href="javascript:;">HR Reports</a>
 													</li>
 													<li>
-														<a href="#">
-															Product Reports
-														</a>
+														<a href="javascript:;">Product Reports</a>
 													</li>
 													<li>
-														<a href="#">
-															Order Reports
-														</a>
+														<a href="javascript:;">Order Reports</a>
 													</li>
 													<li>
-														<a href="#">
-															Revenue Reports
-														</a>
+														<a href="javascript:;">Revenue Reports</a>
 													</li>
 												</ul>
 											</div>
@@ -259,9 +228,7 @@ const Nav = ({ active, children, onClick }) => (
 											>
 												<ul className="list-unstyled b-mega-menu-link">
 													<li>
-														<a href="#">
-															HR Management
-														</a>
+														<a href="javascript:;">HR Management</a>
 													</li>
 													<li className="active">
 														<a href="javascript:;">
@@ -269,17 +236,13 @@ const Nav = ({ active, children, onClick }) => (
 														</a>
 													</li>
 													<li>
-														<a href="#">
-															Role Management
-														</a>
+														<a href="javascript:;">Role Management</a>
 													</li>
 													<li>
-														<a href="#">
-															Sales Management
-														</a>
+														<a href="javascript:;">Sales Management</a>
 													</li>
 													<li>
-														<a href="#">
+														<a href="javascript:;">
 															Employee Management
 														</a>
 													</li>
@@ -293,35 +256,25 @@ const Nav = ({ active, children, onClick }) => (
 											>
 												<ul className="list-unstyled b-mega-menu-link">
 													<li className="active">
-														<a href="#">
-															Educational Blog
-														</a>
+														<a href="javascript:;">Educational Blog</a>
 													</li>
 													<li>
 														{" "}
+														<a href="javascript:;">Technology Blog</a>
+													</li>
+													<li>
+														<a href="javascript:;">Political Blog</a>
+													</li>
+													<li>
+														<a href="javascript:;">Woocommerce Blog</a>
+													</li>
+													<li>
 														<a href="javascript:;">
-															Technology Blog
-														</a>
-													</li>
-													<li>
-														<a href="#">
-															Political Blog
-														</a>
-													</li>
-													<li>
-														<a href="#">
-															Woocommerce Blog
-														</a>
-													</li>
-													<li>
-														<a href="#">
 															Entertainment Blog
 														</a>
 													</li>
 													<li>
-														<a href="#">
-															Newspapper Blog
-														</a>
+														<a href="javascript:;">Newspapper Blog</a>
 													</li>
 												</ul>
 											</div>
@@ -338,12 +291,11 @@ const Nav = ({ active, children, onClick }) => (
 								<div className="p-5 m-4 text-center">
 									<i className="fa fa-desktop f50 text-muted mb-4" />
 									<p className="mb-5">
-										Contrary to popular belief, Lorem Ipsum
-										is not simply random text. It has roots
-										in a piece of classical Latin literature
+										Contrary to popular belief, Lorem Ipsum is not simply random
+										text. It has roots in a piece of classical Latin literature
 										from 45 BC
 									</p>
-									<a href="#" className="btn btn-primary">
+									<a href="javascript:;" className="btn btn-primary">
 										Get Started
 									</a>
 								</div>
@@ -357,12 +309,11 @@ const Nav = ({ active, children, onClick }) => (
 								<div className="p-5 m-4 text-center">
 									<i className="fa fa-magnet f50 text-muted mb-4" />
 									<p className="mb-5">
-										The standard chunk of Lorem Ipsum used
-										since the 1500s is reproduced below for
-										those interested. Sections 1.10.32 and
+										The standard chunk of Lorem Ipsum used since the 1500s is
+										reproduced below for those interested. Sections 1.10.32 and
 										1.10.33
 									</p>
-									<a href="#" className="btn btn-purple">
+									<a href="javascript:;" className="btn btn-purple">
 										Get Started
 									</a>
 								</div>
@@ -385,10 +336,7 @@ const Nav = ({ active, children, onClick }) => (
 			<span className="navbar-toggler-icon" />
 		</button>
 
-		<a
-			href="javascript:;"
-			className="nav-link right_side_toggle responsive-right-side-toggle"
-		>
+		<a href="javascript:;" className="nav-link right_side_toggle responsive-right-side-toggle">
 			<i className="icon-options-vertical"> </i>
 		</a>
 
@@ -400,10 +348,7 @@ const Nav = ({ active, children, onClick }) => (
 					data-placement="right"
 					title="Search"
 				>
-					<div
-						className="nav-link nav-link-collapse collapsed"
-						data-toggle="collapse"
-					>
+					<div className="nav-link nav-link-collapse collapsed" data-toggle="collapse">
 						<i className="vl_search" />
 						<span className="nav-link-text">
 							<input
@@ -461,8 +406,7 @@ const Nav = ({ active, children, onClick }) => (
 						<li>
 							{" "}
 							<a href="dashboard-crypto.html">
-								Dashboard Crypto{" "}
-								<span className="badge badge-success">New</span>
+								Dashboard Crypto <span className="badge badge-success">New</span>
 							</a>
 						</li>
 					</ul>
@@ -505,9 +449,7 @@ const Nav = ({ active, children, onClick }) => (
 						</li>
 						<li>
 							{" "}
-							<a href="toastr-notification.html">
-								Notification Toastr
-							</a>
+							<a href="toastr-notification.html">Notification Toastr</a>
 						</li>
 						<li>
 							{" "}
@@ -567,24 +509,15 @@ const Nav = ({ active, children, onClick }) => (
 					data-placement="right"
 					title="Calendar"
 				>
-					<a
-						className="nav-link"
-						href="calendar-external-events.html"
-					>
+					<a className="nav-link" href="calendar-external-events.html">
 						<i className="vl_calendar" />
 						<span className="nav-link-text">
-							Calendar{" "}
-							<span className="badge badge-primary">2</span>{" "}
+							Calendar <span className="badge badge-primary">2</span>{" "}
 						</span>
 					</a>
 				</li>
 
-				<li
-					className="nav-item"
-					data-toggle="tooltip"
-					data-placement="right"
-					title="Icons"
-				>
+				<li className="nav-item" data-toggle="tooltip" data-placement="right" title="Icons">
 					<a
 						className="nav-link nav-link-collapse collapsed"
 						data-toggle="collapse"
@@ -600,15 +533,11 @@ const Nav = ({ active, children, onClick }) => (
 					>
 						<li>
 							{" "}
-							<a href="icon-fontawesome.html">
-								Fontawesome Icons
-							</a>{" "}
+							<a href="icon-fontawesome.html">Fontawesome Icons</a>{" "}
 						</li>
 						<li>
 							{" "}
-							<a href="icon-simple-line.html">
-								Simple Line Icons
-							</a>{" "}
+							<a href="icon-simple-line.html">Simple Line Icons</a>{" "}
 						</li>
 						<li>
 							{" "}
@@ -621,12 +550,7 @@ const Nav = ({ active, children, onClick }) => (
 					</ul>
 				</li>
 
-				<li
-					className="nav-item"
-					data-toggle="tooltip"
-					data-placement="right"
-					title="Forms"
-				>
+				<li className="nav-item" data-toggle="tooltip" data-placement="right" title="Forms">
 					<a
 						className="nav-link nav-link-collapse collapsed"
 						data-toggle="collapse"
@@ -646,9 +570,7 @@ const Nav = ({ active, children, onClick }) => (
 						</li>
 						<li>
 							{" "}
-							<a href="form-checkbox-radio.html">
-								Checkbox & Radio
-							</a>{" "}
+							<a href="form-checkbox-radio.html">Checkbox & Radio</a>{" "}
 						</li>
 						<li>
 							{" "}
@@ -656,15 +578,11 @@ const Nav = ({ active, children, onClick }) => (
 						</li>
 						<li>
 							{" "}
-							<a href="form-validation.html">
-								Form Validation
-							</a>{" "}
+							<a href="form-validation.html">Form Validation</a>{" "}
 						</li>
 						<li>
 							{" "}
-							<a href="editor-summernote.html">
-								Editor Summernote
-							</a>{" "}
+							<a href="editor-summernote.html">Editor Summernote</a>{" "}
 						</li>
 						<li>
 							{" "}
@@ -680,9 +598,7 @@ const Nav = ({ active, children, onClick }) => (
 						</li>
 						<li>
 							{" "}
-							<a href="form-multi-select.html">
-								Multiple Select
-							</a>{" "}
+							<a href="form-multi-select.html">Multiple Select</a>{" "}
 						</li>
 						<li>
 							{" "}
@@ -724,9 +640,7 @@ const Nav = ({ active, children, onClick }) => (
 						</li>
 						<li>
 							{" "}
-							<a href="table-ajax-datatable.html">
-								Ajax Data Table
-							</a>{" "}
+							<a href="table-ajax-datatable.html">Ajax Data Table</a>{" "}
 						</li>
 					</ul>
 				</li>
@@ -802,9 +716,7 @@ const Nav = ({ active, children, onClick }) => (
 						</li>
 						<li>
 							{" "}
-							<a href="registration.html">
-								Registration Page
-							</a>{" "}
+							<a href="registration.html">Registration Page</a>{" "}
 						</li>
 						<li>
 							{" "}
@@ -838,9 +750,7 @@ const Nav = ({ active, children, onClick }) => (
 						</li>
 						<li>
 							{" "}
-							<a href="layout-dark-nav.html">
-								Dark Left Nav
-							</a>{" "}
+							<a href="layout-dark-nav.html">Dark Left Nav</a>{" "}
 						</li>
 						<li>
 							{" "}
@@ -848,21 +758,15 @@ const Nav = ({ active, children, onClick }) => (
 						</li>
 						<li>
 							{" "}
-							<a href="layout-default-collapsed.html">
-								Nav Collapsed Light
-							</a>
+							<a href="layout-default-collapsed.html">Nav Collapsed Light</a>
 						</li>
 						<li>
 							{" "}
-							<a href="layout-dark-nav-collapsed.html">
-								Nav Collapsed Dark
-							</a>
+							<a href="layout-dark-nav-collapsed.html">Nav Collapsed Dark</a>
 						</li>
 						<li>
 							{" "}
-							<a href="layout-floating-leftside-dark.html">
-								Floating Nav Dark
-							</a>
+							<a href="layout-floating-leftside-dark.html">Floating Nav Dark</a>
 						</li>
 						<li>
 							{" "}
@@ -872,9 +776,7 @@ const Nav = ({ active, children, onClick }) => (
 						</li>
 						<li>
 							{" "}
-							<a href="layout-floating-leftside-light.html">
-								Floating Nav Light{" "}
-							</a>
+							<a href="layout-floating-leftside-light.html">Floating Nav Light </a>
 						</li>
 						<li>
 							{" "}
@@ -905,13 +807,13 @@ const Nav = ({ active, children, onClick }) => (
 						data-parent="#accordion"
 					>
 						<li>
-							<a href="#">Second Level Item</a>
+							<a href="javascript:;">Second Level Item</a>
 						</li>
 						<li>
-							<a href="#">Second Level Item</a>
+							<a href="javascript:;">Second Level Item</a>
 						</li>
 						<li>
-							<a href="#">Second Level Item</a>
+							<a href="javascript:;">Second Level Item</a>
 						</li>
 						<li>
 							<a
@@ -921,18 +823,15 @@ const Nav = ({ active, children, onClick }) => (
 							>
 								Third Level
 							</a>
-							<ul
-								className="sidenav-third-level collapse"
-								id="multi_menu_2"
-							>
+							<ul className="sidenav-third-level collapse" id="multi_menu_2">
 								<li>
-									<a href="#">Third Level Item</a>
+									<a href="javascript:;">Third Level Item</a>
 								</li>
 								<li>
-									<a href="#">Third Level Item</a>
+									<a href="javascript:;">Third Level Item</a>
 								</li>
 								<li>
-									<a href="#">Third Level Item</a>
+									<a href="javascript:;">Third Level Item</a>
 								</li>
 							</ul>
 						</li>
@@ -953,7 +852,7 @@ const Nav = ({ active, children, onClick }) => (
 					<a
 						className="nav-link dropdown-toggle mr-lg-2"
 						id="actionNav"
-						href="#"
+						href="javascript:;"
 						data-toggle="dropdown"
 						aria-haspopup="true"
 						aria-expanded="false"
@@ -961,25 +860,25 @@ const Nav = ({ active, children, onClick }) => (
 						Application
 					</a>
 					<div className="dropdown-menu" aria-labelledby="actionNav">
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Bootstrap 4 Stable
 						</a>
-						<a className="dropdown-item" href="#">
-							DashLab Modern Admin
+						<a className="dropdown-item" href="javascript:;">
+							Dash Modern Admin
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Awesome Widgets Collection
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Developer Friendly Code
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							SASS and GULP Task
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Fully Responsive
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Latest Version Plugins
 						</a>
 					</div>
@@ -988,7 +887,7 @@ const Nav = ({ active, children, onClick }) => (
 					<a
 						className="nav-link dropdown-toggle mr-lg-2"
 						id="reportNav"
-						href="#"
+						href="javascript:;"
 						data-toggle="dropdown"
 						aria-haspopup="true"
 						aria-expanded="false"
@@ -996,28 +895,28 @@ const Nav = ({ active, children, onClick }) => (
 						Reports
 					</a>
 					<div className="dropdown-menu" aria-labelledby="reportNav">
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Daily Reports
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Weekly Reports
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Monthly Reports
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Yearly Reports
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							HR Reports
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Product Reports
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Order Reports
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Revenue Reports
 						</a>
 					</div>
@@ -1026,7 +925,7 @@ const Nav = ({ active, children, onClick }) => (
 					<a
 						className="nav-link dropdown-toggle mr-lg-2"
 						id="orderNav"
-						href="#"
+						href="javascript:;"
 						data-toggle="dropdown"
 						aria-haspopup="true"
 						aria-expanded="false"
@@ -1034,19 +933,19 @@ const Nav = ({ active, children, onClick }) => (
 						Management
 					</a>
 					<div className="dropdown-menu" aria-labelledby="orderNav">
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							HR Management
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Product Management
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Role Management
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Sales Management
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Employee Management
 						</a>
 					</div>
@@ -1058,7 +957,7 @@ const Nav = ({ active, children, onClick }) => (
 					<a
 						className="nav-link dropdown-toggle mr-lg-3"
 						id="messagesDropdown"
-						href="#"
+						href="javascript:;"
 						data-toggle="dropdown"
 						aria-haspopup="true"
 						aria-expanded="false"
@@ -1066,9 +965,7 @@ const Nav = ({ active, children, onClick }) => (
 						<i className="vl_chat-bubble" />
 						<span className="d-lg-none">
 							Messages
-							<span className="badge badge-pill badge-primary">
-								9 New
-							</span>
+							<span className="badge badge-pill badge-primary">9 New</span>
 						</span>
 						<div className="notification-alarm">
 							<span className="wave wave-danger" />
@@ -1082,10 +979,7 @@ const Nav = ({ active, children, onClick }) => (
 					>
 						<h6 className="dropdown-header weight500 ">Messages</h6>
 						<div className="dropdown-divider mb-0" />
-						<a
-							className="dropdown-item border-bottom msg-unread"
-							href="#"
-						>
+						<a className="dropdown-item border-bottom msg-unread" href="javascript:;">
 							<div className="float-left notificaton-thumb">
 								<img
 									className="rounded-circle"
@@ -1094,20 +988,14 @@ const Nav = ({ active, children, onClick }) => (
 								/>
 							</div>
 							<span className="weight500">Andrew Flinton</span>
-							<span className="small float-right text-muted">
-								08:30 AM
-							</span>
+							<span className="small float-right text-muted">08:30 AM</span>
 
 							<div className="dropdown-message">
-								I hope that you will be there in time. See you
-								then
+								I hope that you will be there in time. See you then
 							</div>
 						</a>
 
-						<a
-							className="dropdown-item border-bottom msg-unread"
-							href="#"
-						>
+						<a className="dropdown-item border-bottom msg-unread" href="javascript:;">
 							<div className="float-left notificaton-thumb">
 								<img
 									className="rounded-circle"
@@ -1116,17 +1004,14 @@ const Nav = ({ active, children, onClick }) => (
 								/>
 							</div>
 							<span className="weight500">John Doe</span>
-							<span className="small float-right text-muted">
-								10:28 AM
-							</span>
+							<span className="small float-right text-muted">10:28 AM</span>
 
 							<div className="dropdown-message">
-								Hello this is an example message. Just want to
-								show how it looks
+								Hello this is an example message. Just want to show how it looks
 							</div>
 						</a>
 
-						<a className="dropdown-item border-bottom" href="#">
+						<a className="dropdown-item border-bottom" href="javascript:;">
 							<div className="float-left notificaton-thumb">
 								<img
 									className="rounded-circle"
@@ -1135,18 +1020,15 @@ const Nav = ({ active, children, onClick }) => (
 								/>
 							</div>
 							<span className="weight500">Dash Don</span>
-							<span className="small float-right text-muted">
-								07:12 PM
-							</span>
+							<span className="small float-right text-muted">07:12 PM</span>
 
 							<div className="dropdown-message">
-								Hi, This is Dash Don form usa. I'm looking for
-								someone who really good at design and frontend
-								like mosaddek
+								Hi, This is Dash Don form usa. I'm looking for someone who really
+								good at design and frontend like mosaddek
 							</div>
 						</a>
 
-						<a className="dropdown-item border-bottom" href="#">
+						<a className="dropdown-item border-bottom" href="javascript:;">
 							<div className="float-left notificaton-thumb">
 								<img
 									className="rounded-circle"
@@ -1155,16 +1037,13 @@ const Nav = ({ active, children, onClick }) => (
 								/>
 							</div>
 							<span className="weight500">dkmosa</span>
-							<span className="small float-right text-muted">
-								12:10 PM
-							</span>
+							<span className="small float-right text-muted">12:10 PM</span>
 
 							<div className="dropdown-message">
-								We build a beautiful dashboard admin panel for
-								professional
+								We build a beautiful dashboard admin panel for professional
 							</div>
 						</a>
-						<a className="dropdown-item small" href="#">
+						<a className="dropdown-item small" href="javascript:;">
 							View all messages
 						</a>
 					</div>
@@ -1173,7 +1052,7 @@ const Nav = ({ active, children, onClick }) => (
 					<a
 						className="nav-link dropdown-toggle mr-lg-3"
 						id="alertsDropdown"
-						href="#"
+						href="javascript:;"
 						data-toggle="dropdown"
 						aria-haspopup="true"
 						aria-expanded="false"
@@ -1181,9 +1060,7 @@ const Nav = ({ active, children, onClick }) => (
 						<i className="vl_bell" />
 						<span className="d-lg-none">
 							Notification
-							<span className="badge badge-pill badge-warning">
-								5 New
-							</span>
+							<span className="badge badge-pill badge-warning">5 New</span>
 						</span>
 						<div className="notification-alarm">
 							<span className="wave wave-warning" />
@@ -1195,64 +1072,52 @@ const Nav = ({ active, children, onClick }) => (
 						className="dropdown-menu dropdown-menu-right header-right-dropdown-width pb-0"
 						aria-labelledby="alertsDropdown"
 					>
-						<h6 className="dropdown-header weight500">
-							Notification
-						</h6>
+						<h6 className="dropdown-header weight500">Notification</h6>
 
 						<div className="dropdown-divider mb-0" />
-						<a className="dropdown-item border-bottom" href="#">
+						<a className="dropdown-item border-bottom" href="javascript:;">
 							<span className="text-primary">
 								<span className="weight500">
-									<i className="vl_bell weight600 pr-2" />Weekly
-									Update
+									<i className="vl_bell weight600 pr-2" />Weekly Update
 								</span>
 							</span>
-							<span className="small float-right text-muted">
-								03:14 AM
-							</span>
+							<span className="small float-right text-muted">03:14 AM</span>
 
 							<div className="dropdown-message f12">
-								This week project update report generated. All
-								team members are requested to check the updates
+								This week project update report generated. All team members are
+								requested to check the updates
 							</div>
 						</a>
 
-						<a className="dropdown-item border-bottom" href="#">
+						<a className="dropdown-item border-bottom" href="javascript:;">
 							<span className="text-danger">
 								<span className="weight500">
-									<i className="vl_Download-circle weight600 pr-2" />Server
-									Error
+									<i className="vl_Download-circle weight600 pr-2" />Server Error
 								</span>
 							</span>
-							<span className="small float-right text-muted">
-								10:34 AM
-							</span>
+							<span className="small float-right text-muted">10:34 AM</span>
 
 							<div className="dropdown-message f12">
-								Unexpectedly server response stop. Responsible
-								members are requested to fix it soon
+								Unexpectedly server response stop. Responsible members are requested
+								to fix it soon
 							</div>
 						</a>
 
-						<a className="dropdown-item border-bottom" href="#">
+						<a className="dropdown-item border-bottom" href="javascript:;">
 							<span className="text-success">
 								<span className="weight500">
-									<i className="vl_screen weight600 pr-2" />Monthly
-									Meeting
+									<i className="vl_screen weight600 pr-2" />Monthly Meeting
 								</span>
 							</span>
-							<span className="small float-right text-muted">
-								12:30 AM
-							</span>
+							<span className="small float-right text-muted">12:30 AM</span>
 
 							<div className="dropdown-message f12">
-								Our monthly meeting will be held on tomorrow
-								sharp 12:30. All members are requested to attend
-								this meeting.
+								Our monthly meeting will be held on tomorrow sharp 12:30. All
+								members are requested to attend this meeting.
 							</div>
 						</a>
 
-						<a className="dropdown-item small" href="#">
+						<a className="dropdown-item small" href="javascript:;">
 							View all notification
 						</a>
 					</div>
@@ -1261,7 +1126,7 @@ const Nav = ({ active, children, onClick }) => (
 					<a
 						className="nav-link dropdown-toggle mr-lg-3"
 						id="userNav"
-						href="#"
+						href="javascript:;"
 						data-toggle="dropdown"
 						aria-haspopup="true"
 						aria-expanded="false"
@@ -1274,22 +1139,18 @@ const Nav = ({ active, children, onClick }) => (
 							/>
 						</div>
 					</a>
-					<div
-						className="dropdown-menu dropdown-menu-right"
-						aria-labelledby="userNav"
-					>
-						<a className="dropdown-item" href="#">
+					<div className="dropdown-menu dropdown-menu-right" aria-labelledby="userNav">
+						<a className="dropdown-item" href="javascript:;">
 							My Profile
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Account Settings
 						</a>
-						<a className="dropdown-item" href="#">
+						<a className="dropdown-item" href="javascript:;">
 							Inbox <span className="badge badge-primary">3</span>
 						</a>
-						<a className="dropdown-item" href="#">
-							Message{" "}
-							<span className="badge badge-success">5</span>
+						<a className="dropdown-item" href="javascript:;">
+							Message <span className="badge badge-success">5</span>
 						</a>
 						<div className="dropdown-divider" />
 						<a className="dropdown-item" href="login.html">
@@ -1298,10 +1159,7 @@ const Nav = ({ active, children, onClick }) => (
 					</div>
 				</li>
 				<li className="nav-item">
-					<a
-						href="javascript:;"
-						className="nav-link right_side_toggle"
-					>
+					<a href="javascript:;" className="nav-link right_side_toggle">
 						<i className="icon-options-vertical"> </i>
 					</a>
 				</li>

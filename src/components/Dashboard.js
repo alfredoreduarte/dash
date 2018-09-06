@@ -2,7 +2,7 @@
 
 import React from "react"
 
-const Dashboard = ({ active, children, onClick }) => (
+const Dashboard = () => (
 	<div className="content-wrapper">
 		<div className="creative-state-area basic-gradient">
 			<div className="row">
@@ -49,9 +49,7 @@ const Dashboard = ({ active, children, onClick }) => (
 									<h4 className="text-uppercase mb-0 weight500 text-dark">
 										4,87,654
 									</h4>
-									<span className="text-muted">
-										Downloads
-									</span>
+									<span className="text-muted">Downloads</span>
 								</div>
 							</div>
 						</div>
@@ -68,9 +66,7 @@ const Dashboard = ({ active, children, onClick }) => (
 									<h4 className="text-uppercase mb-0 weight500 text-dark">
 										4,87,654
 									</h4>
-									<span className="text-muted">
-										Active Installation
-									</span>
+									<span className="text-muted">Active Installation</span>
 								</div>
 							</div>
 						</div>
@@ -87,9 +83,7 @@ const Dashboard = ({ active, children, onClick }) => (
 									<h4 className="text-uppercase mb-0 weight500 text-dark">
 										4,87,654
 									</h4>
-									<span className="text-muted">
-										Product Sales
-									</span>
+									<span className="text-muted">Product Sales</span>
 								</div>
 							</div>
 						</div>
@@ -104,37 +98,26 @@ const Dashboard = ({ active, children, onClick }) => (
 					<div className="card card-shadow mb-4">
 						<div className="card-header border-0">
 							<div className="custom-title-wrap bar-info">
-								<div className="custom-title">
-									Sales Statistical Overview
-								</div>
+								<div className="custom-title">Sales Statistical Overview</div>
 								<div className=" widget-action-link">
 									<div className="dropdown">
 										<a
-											href="#"
+											href="javascript:;"
 											className="btn btn-transparent text-secondary dropdown-hover p-0"
 											data-toggle="dropdown"
 										>
 											<i className=" vl_ellipsis-fill-h" />
 										</a>
 										<div className="dropdown-menu dropdown-menu-right vl-dropdown">
-											<a
-												className="dropdown-item"
-												href="#"
-											>
+											<a className="dropdown-item" href="javascript:;">
 												{" "}
 												Edit
 											</a>
-											<a
-												className="dropdown-item"
-												href="#"
-											>
+											<a className="dropdown-item" href="javascript:;">
 												{" "}
 												Delete
 											</a>
-											<a
-												className="dropdown-item"
-												href="#"
-											>
+											<a className="dropdown-item" href="javascript:;">
 												{" "}
 												Settings
 											</a>
@@ -155,20 +138,16 @@ const Dashboard = ({ active, children, onClick }) => (
 									</small>
 									<ul className="list-unstyled mt-5">
 										<li className="text-muted">
-											<i className="fa fa-clock-o pr-2" />{" "}
-											Data from January
+											<i className="fa fa-clock-o pr-2" /> Data from January
 										</li>
 										<li className="text-muted">
-											<i className="fa fa-clock-o pr-2" />{" "}
-											Last active in 12.01.2018
+											<i className="fa fa-clock-o pr-2" /> Last active in
+											12.01.2018
 										</li>
 									</ul>
 								</div>
 								<div className="col-xl-9">
-									<canvas
-										id="dash3_sales_chart"
-										height="250"
-									/>
+									<canvas id="dash3_sales_chart" height="250" />
 								</div>
 							</div>
 						</div>
@@ -215,8 +194,7 @@ const Dashboard = ({ active, children, onClick }) => (
 									</ul>
 								</div>
 								<div className="custom-post-title">
-									Graphical view of this week issue solving
-									status
+									Graphical view of this week issue solving status
 								</div>
 							</div>
 						</div>
@@ -230,10 +208,7 @@ const Dashboard = ({ active, children, onClick }) => (
 								>
 									<div className="row">
 										<div className="col-12 col-xl-7 col-md-6 text-center">
-											<canvas
-												id="doughnut_chart"
-												className="mb-4"
-											/>
+											<canvas id="doughnut_chart" className="mb-4" />
 											<small className="text-muted">
 												Realtime data update instantly
 											</small>
@@ -248,9 +223,7 @@ const Dashboard = ({ active, children, onClick }) => (
 														}}
 													/>{" "}
 													40%
-													<span className="float-right">
-														Solved
-													</span>
+													<span className="float-right">Solved</span>
 												</li>
 												<li className="list-widget-border mb-3 pb-3">
 													<i
@@ -260,9 +233,7 @@ const Dashboard = ({ active, children, onClick }) => (
 														}}
 													/>{" "}
 													10%
-													<span className="float-right">
-														Pending
-													</span>
+													<span className="float-right">Pending</span>
 												</li>
 												<li className="list-widget-border mb-3 pb-3">
 													<i
@@ -272,9 +243,7 @@ const Dashboard = ({ active, children, onClick }) => (
 														}}
 													/>{" "}
 													10%
-													<span className="float-right">
-														Declain
-													</span>
+													<span className="float-right">Declain</span>
 												</li>
 												<li className="list-widget-border mb-3 pb-3">
 													<i
@@ -284,9 +253,7 @@ const Dashboard = ({ active, children, onClick }) => (
 														}}
 													/>{" "}
 													40%
-													<span className="float-right">
-														Reopen
-													</span>
+													<span className="float-right">Reopen</span>
 												</li>
 											</ul>
 										</div>
@@ -300,10 +267,7 @@ const Dashboard = ({ active, children, onClick }) => (
 								>
 									<div className="row">
 										<div className="col-12 col-xl-7 col-md-6 text-center">
-											<canvas
-												id="doughnut_chart2"
-												className="mb-4"
-											/>
+											<canvas id="doughnut_chart2" className="mb-4" />
 											<small className="text-muted">
 												Realtime data update instantly
 											</small>
@@ -318,9 +282,7 @@ const Dashboard = ({ active, children, onClick }) => (
 														}}
 													/>{" "}
 													30%
-													<span className="float-right">
-														Solved
-													</span>
+													<span className="float-right">Solved</span>
 												</li>
 												<li className="list-widget-border mb-3 pb-3">
 													<i
@@ -330,9 +292,7 @@ const Dashboard = ({ active, children, onClick }) => (
 														}}
 													/>{" "}
 													20%
-													<span className="float-right">
-														Pending
-													</span>
+													<span className="float-right">Pending</span>
 												</li>
 												<li className="list-widget-border mb-3 pb-3">
 													<i
@@ -342,9 +302,7 @@ const Dashboard = ({ active, children, onClick }) => (
 														}}
 													/>{" "}
 													25%
-													<span className="float-right">
-														Declain
-													</span>
+													<span className="float-right">Declain</span>
 												</li>
 												<li className="list-widget-border mb-3 pb-3">
 													<i
@@ -354,9 +312,7 @@ const Dashboard = ({ active, children, onClick }) => (
 														}}
 													/>{" "}
 													25%
-													<span className="float-right">
-														Reopen
-													</span>
+													<span className="float-right">Reopen</span>
 												</li>
 											</ul>
 										</div>
@@ -370,9 +326,7 @@ const Dashboard = ({ active, children, onClick }) => (
 					<div className="card card-shadow mb-4">
 						<div className="card-header border-0">
 							<div className="custom-title-wrap bar-warning">
-								<div className="custom-title">
-									Regional Sales
-								</div>
+								<div className="custom-title">Regional Sales</div>
 							</div>
 						</div>
 						<div className="card-body">
@@ -383,10 +337,7 @@ const Dashboard = ({ active, children, onClick }) => (
 									<span>Washington</span>
 									<span className="float-right">85%</span>
 								</div>
-								<div
-									className="progress"
-									style={{ height: "1px" }}
-								>
+								<div className="progress" style={{ height: "1px" }}>
 									<div
 										className="progress-bar bg-primary"
 										role="progressbar"
@@ -400,10 +351,7 @@ const Dashboard = ({ active, children, onClick }) => (
 									<span>California </span>
 									<span className="float-right">55%</span>
 								</div>
-								<div
-									className="progress"
-									style={{ height: "1px" }}
-								>
+								<div className="progress" style={{ height: "1px" }}>
 									<div
 										className="progress-bar bg-purple-light"
 										role="progressbar"
@@ -417,10 +365,7 @@ const Dashboard = ({ active, children, onClick }) => (
 									<span>Texas</span>
 									<span className="float-right">35%</span>
 								</div>
-								<div
-									className="progress"
-									style={{ height: "1px" }}
-								>
+								<div className="progress" style={{ height: "1px" }}>
 									<div
 										className="progress-bar bg-purple"
 										role="progressbar"
@@ -439,38 +384,27 @@ const Dashboard = ({ active, children, onClick }) => (
 					<div className="card card-shadow mb-4">
 						<div className="card-header border-0">
 							<div className="custom-title-wrap bar-turquoise">
-								<div className="custom-title">
-									Sales Monitor
-								</div>
+								<div className="custom-title">Sales Monitor</div>
 
 								<div className=" widget-action-link">
 									<div className="dropdown">
 										<a
-											href="#"
+											href="javascript:;"
 											className="btn btn-transparent text-secondary dropdown-hover p-0"
 											data-toggle="dropdown"
 										>
 											<i className=" vl_ellipsis-fill-h" />
 										</a>
 										<div className="dropdown-menu dropdown-menu-right vl-dropdown">
-											<a
-												className="dropdown-item"
-												href="#"
-											>
+											<a className="dropdown-item" href="javascript:;">
 												{" "}
 												Edit
 											</a>
-											<a
-												className="dropdown-item"
-												href="#"
-											>
+											<a className="dropdown-item" href="javascript:;">
 												{" "}
 												Delete
 											</a>
-											<a
-												className="dropdown-item"
-												href="#"
-											>
+											<a className="dropdown-item" href="javascript:;">
 												{" "}
 												Settings
 											</a>
@@ -483,22 +417,16 @@ const Dashboard = ({ active, children, onClick }) => (
 							<div className="row">
 								<div className="col-xl-5 col-md-5">
 									<p className="text-muted mb-5">
-										Proper sell monitoring through the world
-										map to plan <br />
+										Proper sell monitoring through the world map to plan <br />
 										for the next marketing attempt
 									</p>
 
 									<div className="mb-4">
 										<div className="progress-title">
 											<span>Europe</span>
-											<span className="float-right">
-												35%
-											</span>
+											<span className="float-right">35%</span>
 										</div>
-										<div
-											className="progress"
-											style={{ height: "1px" }}
-										>
+										<div className="progress" style={{ height: "1px" }}>
 											<div
 												className="progress-bar bg-turquoise"
 												role="progressbar"
@@ -510,14 +438,9 @@ const Dashboard = ({ active, children, onClick }) => (
 									<div className="mb-4">
 										<div className="progress-title">
 											<span>Latin America </span>
-											<span className="float-right">
-												55%
-											</span>
+											<span className="float-right">55%</span>
 										</div>
-										<div
-											className="progress"
-											style={{ height: "1px" }}
-										>
+										<div className="progress" style={{ height: "1px" }}>
 											<div
 												className="progress-bar bg-purple"
 												role="progressbar"
@@ -529,14 +452,9 @@ const Dashboard = ({ active, children, onClick }) => (
 									<div className="mb-4">
 										<div className="progress-title">
 											<span>Australia</span>
-											<span className="float-right">
-												85%
-											</span>
+											<span className="float-right">85%</span>
 										</div>
-										<div
-											className="progress"
-											style={{ height: "1px" }}
-										>
+										<div className="progress" style={{ height: "1px" }}>
 											<div
 												className="progress-bar bg-warning"
 												role="progressbar"
@@ -563,10 +481,7 @@ const Dashboard = ({ active, children, onClick }) => (
 						<div className="row no-gutters">
 							<div className="col-5 basic-gradient-alt weather-radius text-center position-relative">
 								<div className="weather-shade">
-									<img
-										src="assets/img/weather-rain-bg.svg"
-										alt=""
-									/>
+									<img src="assets/img/weather-rain-bg.svg" alt="" />
 								</div>
 								<div className="card-body mt-5 pt-5">
 									<i className="vl_weather-day-rain text-light f80 mt-5 pt-5 d-block" />
@@ -579,59 +494,45 @@ const Dashboard = ({ active, children, onClick }) => (
 								<div className="card-body pt-5">
 									<h3 className="text-uppercase">
 										TUE 22 <br />
-										<span className="weight300 text-muted">
-											September
-										</span>
+										<span className="weight300 text-muted">September</span>
 									</h3>
 									<div className="f50 weight300 text-primary pt-5 pb-5">
 										13<sup>o</sup>
-										<span className="h3 weight300">
-											Rain
-										</span>
+										<span className="h3 weight300">Rain</span>
 									</div>
 								</div>
 								<div className="card-footer bg-white text-center border-0 pb-4 mb-2">
 									<div className="row">
 										<div className="col">
-											<h6 className="text-muted mb-3">
-												WED
-											</h6>
+											<h6 className="text-muted mb-3">WED</h6>
 											<i className="vl_weather-day-snow f24" />
 											<p className="mb-0 text-muted">
 												17<sup>o</sup>c
 											</p>
 										</div>
 										<div className="col">
-											<h6 className="text-muted mb-3">
-												THU
-											</h6>
+											<h6 className="text-muted mb-3">THU</h6>
 											<i className="vl_weather-night-cloud f24" />
 											<p className="mb-0 text-muted">
 												22<sup>o</sup>c
 											</p>
 										</div>
 										<div className="col">
-											<h6 className="text-muted mb-3">
-												FRI
-											</h6>
+											<h6 className="text-muted mb-3">FRI</h6>
 											<i className="vl_weather-sunny-day f24" />
 											<p className="mb-0 text-muted">
 												18<sup>o</sup>c
 											</p>
 										</div>
 										<div className="col">
-											<h6 className="text-muted mb-3">
-												SAT
-											</h6>
+											<h6 className="text-muted mb-3">SAT</h6>
 											<i className="vl_weather-thunder f24" />
 											<p className="mb-0 text-muted">
 												29<sup>o</sup>c
 											</p>
 										</div>
 										<div className="col">
-											<h6 className="text-muted mb-3">
-												SUN
-											</h6>
+											<h6 className="text-muted mb-3">SUN</h6>
 											<i className="vl_weather-snow f24" />
 											<p className="mb-0 text-muted">
 												13<sup>o</sup>c
@@ -647,12 +548,10 @@ const Dashboard = ({ active, children, onClick }) => (
 					<div className="card card-shadow mb-4">
 						<div className="card-header border-0">
 							<div className="custom-title-wrap bar-danger">
-								<div className="custom-title">
-									Activity Monitor
-								</div>
+								<div className="custom-title">Activity Monitor</div>
 								<div className=" widget-action-link">
 									<a
-										href="#"
+										href="javascript:;"
 										className="btn btn-transparent text-secondary p-0 text-muted"
 									>
 										View All
@@ -664,33 +563,26 @@ const Dashboard = ({ active, children, onClick }) => (
 							<ul className="list-unstyled base-timeline activity-timeline">
 								<li className="">
 									<div className="timeline-icon">
-										<img
-											src="assets/img/avatar/avatar1.jpg"
-											alt=""
-										/>
+										<img src="assets/img/avatar/avatar1.jpg" alt="" />
 									</div>
 									<div className="act-time">Today</div>
 									<div className="base-timeline-info">
-										<a href="#">John123</a> Successfully
-										purchased item#26
+										<a href="javascript:;">John123</a> Successfully purchased
+										item#26
 									</div>
-									<small className="text-muted">
-										28 mins ago
-									</small>
+									<small className="text-muted">28 mins ago</small>
 								</li>
 								<li className="">
 									<div className="timeline-icon bg-turquoise">
 										<i className="fa fa-download" />
 									</div>
 									<div className="base-timeline-info">
-										<a href="#" className="text-danger">
+										<a href="javascript:;" className="text-danger">
 											Farnandez
 										</a>{" "}
 										placed the order for accessories
 									</div>
-									<small className="text-muted">
-										2 days ago
-									</small>
+									<small className="text-muted">2 days ago</small>
 								</li>
 								<li className="">
 									<div className="timeline-icon bg-info">
@@ -699,31 +591,24 @@ const Dashboard = ({ active, children, onClick }) => (
 									<div className="act-time">Yesterday</div>
 									<div className="base-timeline-info">
 										User{" "}
-										<a href="#" className="text-purple">
+										<a href="javascript:;" className="text-purple">
 											Lisa Maria
 										</a>{" "}
 										checked out from the market
 									</div>
-									<small className="text-muted">
-										12 mins ago
-									</small>
+									<small className="text-muted">12 mins ago</small>
 								</li>
 								<li className="">
 									<div className="timeline-icon">
-										<img
-											src="assets/img/avatar/avatar2.jpg"
-											alt=""
-										/>
+										<img src="assets/img/avatar/avatar2.jpg" alt="" />
 									</div>
 									<div className="base-timeline-info">
-										<a href="#" className="text-info">
+										<a href="javascript:;" className="text-info">
 											Charlie Johnson{" "}
 										</a>{" "}
 										joined DashLab last week.
 									</div>
-									<small className="text-muted">
-										3 days ago
-									</small>
+									<small className="text-muted">3 days ago</small>
 								</li>
 								<li className="">
 									<div className="timeline-icon">
@@ -732,14 +617,12 @@ const Dashboard = ({ active, children, onClick }) => (
 									<div className="act-time">29 January</div>
 									<div className="base-timeline-info">
 										User{" "}
-										<a href="#" className="text-warning">
+										<a href="javascript:;" className="text-warning">
 											Lisa Maria
 										</a>{" "}
 										checked out from the market
 									</div>
-									<small className="text-muted">
-										15 mins ago
-									</small>
+									<small className="text-muted">15 mins ago</small>
 								</li>
 							</ul>
 						</div>
@@ -752,56 +635,45 @@ const Dashboard = ({ active, children, onClick }) => (
 					<div className="card card-shadow mb-4">
 						<div className="card-header border-0">
 							<div className="custom-title-wrap bar-primary">
-								<div className="custom-title">
-									Today's Activity
-								</div>
+								<div className="custom-title">Today's Activity</div>
 							</div>
 						</div>
 						<div className="card-body">
 							<ul className="list-unstyled base-timeline">
 								<li className="time-dot-primary">
 									<div className="base-timeline-info">
-										<a href="#">John123</a> Successfully
-										purchased item#26
+										<a href="javascript:;">John123</a> Successfully purchased
+										item#26
 									</div>
-									<small className="text-muted">
-										28 mins ago
-									</small>
+									<small className="text-muted">28 mins ago</small>
 								</li>
 								<li className="time-dot-danger">
 									<div className="base-timeline-info">
-										<a href="#" className="text-danger">
+										<a href="javascript:;" className="text-danger">
 											Farnandez
 										</a>{" "}
 										placed the order for accessories
 									</div>
-									<small className="text-muted">
-										2 days ago
-									</small>
+									<small className="text-muted">2 days ago</small>
 								</li>
 								<li className="time-dot-purple">
 									<div className="base-timeline-info">
 										User{" "}
-										<a href="#" className="text-purple">
+										<a href="javascript:;" className="text-purple">
 											Lisa Maria
 										</a>{" "}
 										checked out from the market
 									</div>
-									<small className="text-muted">
-										12 mins ago
-									</small>
+									<small className="text-muted">12 mins ago</small>
 								</li>
 								<li className="time-dot-turquoise">
 									<div className="base-timeline-info">
-										<a href="#" className="text-info">
+										<a href="javascript:;" className="text-info">
 											Charlie Johnson{" "}
 										</a>{" "}
-										joined DashLab last week. Congrats to
-										him
+										joined DashLab last week. Congrats to him
 									</div>
-									<small className="text-muted">
-										3 days ago
-									</small>
+									<small className="text-muted">3 days ago</small>
 								</li>
 							</ul>
 						</div>
@@ -815,49 +687,36 @@ const Dashboard = ({ active, children, onClick }) => (
 							</div>
 						</div>
 						<div className="card-body pb-0">
-							<ul
-								className="todo-list-item list-unstyled"
-								id="todo-list"
-							>
+							<ul className="todo-list-item list-unstyled" id="todo-list">
 								<li className="todo-bg-primary">
 									<div className="chk-todo float-left">
 										<input type="checkbox" value="0" />
 									</div>
-									<p className="todo-title">
-										Scheduled Meeting with Anthony
-									</p>
+									<p className="todo-title">Scheduled Meeting with Anthony</p>
 								</li>
 								<li className="todo-bg-danger">
 									<div className="chk-todo float-left">
 										<input type="checkbox" value="0" />
 									</div>
-									<p className="todo-title">
-										Submit monthly report to John Doe
-									</p>
+									<p className="todo-title">Submit monthly report to John Doe</p>
 								</li>
 								<li className="todo-bg-purple">
 									<div className="chk-todo float-left">
 										<input type="checkbox" value="0" />
 									</div>
-									<p className="todo-title">
-										Follow up the team work
-									</p>
+									<p className="todo-title">Follow up the team work</p>
 								</li>
 								<li className="todo-bg-info">
 									<div className="chk-todo float-left">
 										<input type="checkbox" value="0" />
 									</div>
-									<p className="todo-title">
-										Submit monthly report to John Doe
-									</p>
+									<p className="todo-title">Submit monthly report to John Doe</p>
 								</li>
 								<li className="todo-bg-warning">
 									<div className="chk-todo float-left">
 										<input type="checkbox" value="0" />
 									</div>
-									<p className="todo-title">
-										Make a meeting call to client
-									</p>
+									<p className="todo-title">Make a meeting call to client</p>
 								</li>
 							</ul>
 						</div>
@@ -890,10 +749,7 @@ const Dashboard = ({ active, children, onClick }) => (
 							</div>
 						</div>
 						<div className="card-body">
-							<div
-								className="chat-wrap"
-								style={{ height: "280px" }}
-							>
+							<div className="chat-wrap" style={{ height: "280px" }}>
 								<ul className="list-unstyled">
 									<li>
 										<div className="chat-info">
@@ -911,9 +767,8 @@ const Dashboard = ({ active, children, onClick }) => (
 									<li className="sender">
 										<div className="chat-info">
 											<div className="chat-text">
-												I am fine. Danny I need a help
-												from you. It will be great for
-												me if you can
+												I am fine. Danny I need a help from you. It will be
+												great for me if you can
 											</div>
 										</div>
 									</li>
@@ -933,8 +788,7 @@ const Dashboard = ({ active, children, onClick }) => (
 									<li className="sender">
 										<div className="chat-info">
 											<div className="chat-text">
-												I need a dashboard for my
-												project
+												I need a dashboard for my project
 											</div>
 										</div>
 									</li>
@@ -946,9 +800,7 @@ const Dashboard = ({ active, children, onClick }) => (
 													alt=""
 												/>
 											</div>
-											<div className="chat-text">
-												ok, how can i help you?
-											</div>
+											<div className="chat-text">ok, how can i help you?</div>
 										</div>
 									</li>
 									<li className="sender">
@@ -967,8 +819,7 @@ const Dashboard = ({ active, children, onClick }) => (
 												/>
 											</div>
 											<div className="chat-text">
-												Yeah sure, I'll give you a
-												design next week
+												Yeah sure, I'll give you a design next week
 											</div>
 										</div>
 									</li>
@@ -978,10 +829,7 @@ const Dashboard = ({ active, children, onClick }) => (
 						<div className="card-footer border-0 pt-0 chat-type">
 							<div className="row">
 								<div className="col-10">
-									<a
-										href="javascript:;"
-										className="file-attachment float-left"
-									>
+									<a href="javascript:;" className="file-attachment float-left">
 										<i className="fa fa-paperclip" />
 									</a>
 									<input

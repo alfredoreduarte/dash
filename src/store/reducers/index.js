@@ -1,14 +1,9 @@
 /** @format */
 
 import { combineReducers } from "redux"
-import {
-	ADD_TODO,
-	TOGGLE_TODO,
-	SET_VISIBILITY_FILTER,
-	VisibilityFilters,
-} from "../actions"
-import { rootReducer as users } from "../containers/Users/store"
-const { SHOW_ALL } = VisibilityFilters
+import { reducer as formReducer } from "redux-form"
+import { rootReducer as users } from "../../Users/store"
+import { ADD_TODO, TOGGLE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters } from "../actions"
 
 const visibilityFilter = (state = VisibilityFilters.SHOW_ALL, action) => {
 	switch (action.type) {
@@ -32,10 +27,7 @@ const todos = (state = [], action) => {
 			]
 		case TOGGLE_TODO:
 			return state.map(
-				todo =>
-					todo.id === action.id
-						? { ...todo, completed: !todo.completed }
-						: todo
+				todo => (todo.id === action.id ? { ...todo, completed: !todo.completed } : todo)
 			)
 		default:
 			return state
@@ -46,6 +38,7 @@ const todoApp = combineReducers({
 	visibilityFilter,
 	todos,
 	users,
+	form: formReducer,
 })
 
 export default todoApp

@@ -5,6 +5,9 @@ import { toggleTodo } from "../actions"
 import TodoList from "../components/TodoList"
 import { VisibilityFilters } from "../actions"
 
+//
+// getVisibleTodos should become a selector
+//
 const getVisibleTodos = (todos, filter) => {
 	switch (filter) {
 		case VisibilityFilters.SHOW_ALL:
