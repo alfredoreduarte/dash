@@ -111,8 +111,12 @@ export default connect(
 								<Tab>Tab 1</Tab>
 								<Tab>Tab 2</Tab>
 							</TabList>
-							<TabPane>uno</TabPane>
-							<TabPane>dos</TabPane>
+							<TabPane>
+								<img src="/images/trump-left.jpg" className="img-fluid" />
+							</TabPane>
+							<TabPane>
+								<img src="/images/trump-right.jpg" className="img-fluid" />
+							</TabPane>
 						</Tabs>
 					</div>
 				</div>
