@@ -3,31 +3,11 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import classNames from "classnames"
+import WithTabs from "../hoc/WithTabs"
 
-class Tabs extends Component {
-	constructor(props) {
-		super(props)
-		this.state = {
-			activeIndex: 0,
-		}
-		this.handleSelected = this.handleSelected.bind(this)
-	}
-
-	componentDidMount() {}
-
-	componentWillUnmount() {}
-
-	handleSelected(index) {
-		this.setState(state => ({
-			activeIndex: index,
-		}))
-	}
-
-	render() {
-		const { activeIndex } = this.state
-		const { children } = this.props
-		const { handleSelected } = this
-		return (
+const Tabs = ({ children }) => (
+	<WithTabs
+		render={({ activeIndex, handleSelected }) => (
 			<div>
 				{React.Children.map(children, (child, index) => {
 					if (child.type.role === "TabList") {
@@ -47,9 +27,9 @@ class Tabs extends Component {
 					})}
 				</div>
 			</div>
-		)
-	}
-}
+		)}
+	/>
+)
 
 Tabs.propTypes = {
 	children: PropTypes.oneOfType([PropTypes.element, PropTypes.array]),
