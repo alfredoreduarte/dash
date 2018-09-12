@@ -4,6 +4,10 @@ import React from "react"
 import { connect } from "react-redux"
 import { Helmet } from "react-helmet"
 import { Link } from "react-router-dom"
+import Tabs from "../components/Tabs"
+import TabList from "../components/TabList"
+import Tab from "../components/Tab"
+import TabPane from "../components/TabPane"
 import UserList from "../Users/List/"
 import UserForm from "../Users/Form/"
 
@@ -91,6 +95,25 @@ export default connect(
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+			<div className="col-xl-6 col-md-12">
+				<div className="card card-shadow mb-4">
+					<div className="card-header border-0">
+						<div className="custom-title-wrap bar-danger">
+							<div className="custom-title">Tabs</div>
+						</div>
+					</div>
+					<div className="card-body">
+						<Tabs>
+							<TabList className="mb-3">
+								<Tab>Tab 1</Tab>
+								<Tab>Tab 2</Tab>
+							</TabList>
+							<TabPane>uno</TabPane>
+							<TabPane>dos</TabPane>
+						</Tabs>
 					</div>
 				</div>
 			</div>
