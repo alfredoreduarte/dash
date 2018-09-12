@@ -1,11 +1,12 @@
 /** @format */
 
 import React, { Component } from "react"
+import PropTypes from "prop-types"
 import { Link } from "react-router-dom"
 import classNames from "classnames"
 import NavDropdown from "./NavDropdown"
 import NavLink from "./NavLink"
-import MegaMenu from "./MegaMenu"
+import MegaMenu from "./MegaMenu/"
 import DropdownHeader from "./DropdownHeader"
 
 class Nav extends Component {
@@ -13,12 +14,17 @@ class Nav extends Component {
 		super(props)
 		this.state = {
 			leftSidebarCollapsed: true,
+			responsiveBarCollapsed: true,
 		}
 		this.LEFT_SIDE_TOGGLED_CLASS = "left-side-toggled"
 		this.toggleSideNav = this.toggleSideNav.bind(this)
+		this.toggleResponsiveNav = this.toggleResponsiveNav.bind(this)
 	}
 	componentDidMount() {
-		this.toggleSideNav()
+		document.body.classList.add("fixed-nav")
+		if (this.props.floating) {
+			document.body.classList.add("leftnav-floating")
+		}
 	}
 
 	componentWillUnmount() {}
@@ -34,21 +40,20 @@ class Nav extends Component {
 		}))
 	}
 
+	toggleResponsiveNav() {
+		this.setState(state => ({
+			responsiveBarCollapsed: !state.responsiveBarCollapsed,
+		}))
+	}
+
 	render() {
-		const { toggleSideNav, toggleMegaMenu } = this
-		const { leftSidebarCollapsed } = this.state
+		const { toggleSideNav, toggleResponsiveNav, toggleMegaMenu } = this
+		const { leftSidebarCollapsed, responsiveBarCollapsed } = this.state
+		const { className } = this.props
 		return (
-			<nav className="navbar navbar-expand-lg fixed-top navbar-dark" id="mainNav">
+			<nav className={className} id="mainNav">
 				<MegaMenu />
-				<button
-					className="navbar-toggler"
-					type="button"
-					data-toggle="collapse"
-					data-target="#navbarResponsive"
-					aria-controls="navbarResponsive"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
+				<button className="navbar-toggler" type="button" onClick={toggleResponsiveNav}>
 					<span className="navbar-toggler-icon" />
 				</button>
 
@@ -59,7 +64,11 @@ class Nav extends Component {
 					<i className="icon-options-vertical"> </i>
 				</a>
 
-				<div className="collapse navbar-collapse">
+				<div
+					className={classNames("collapse navbar-collapse", {
+						show: !responsiveBarCollapsed,
+					})}
+				>
 					<ul className="navbar-nav left-side-nav">
 						<li className="nav-item-search">
 							<div className="nav-link nav-link-collapse collapsed">
@@ -114,7 +123,7 @@ class Nav extends Component {
 						</li>
 					</ul>
 
-					<ul className="navbar-nav header-links" id="cosote">
+					<ul className="navbar-nav header-links">
 						<NavDropdown title="Application">
 							<Link to="/" className="dropdown-item">
 								Home
@@ -125,9 +134,12 @@ class Nav extends Component {
 							<Link to="/redux" className="dropdown-item">
 								Redux
 							</Link>
+							<Link to="/topics" className="dropdown-item">
+								React-router
+							</Link>
 						</NavDropdown>
 					</ul>
-					<ul className="navbar-nav header-links" id="cosote2">
+					<ul className="navbar-nav header-links">
 						<NavDropdown title="More examples">
 							<Link to="/" className="dropdown-item">
 								Home
@@ -143,109 +155,20 @@ class Nav extends Component {
 					</ul>
 
 					<ul className="navbar-nav header-links ml-auto hide-arrow">
-						<li className="nav-item dropdown d-none">
-							<a
-								className="nav-link dropdown-toggle mr-lg-3"
-								id="messagesDropdown"
-								href="javascript:;"
-								data-toggle="dropdown"
-								aria-haspopup="true"
-								aria-expanded="false"
-							>
-								<i className="vl_chat-bubble" />
-								<span className="d-lg-none">
-									Messages
-									<span className="badge badge-pill badge-primary">9 New</span>
-								</span>
-								<div className="notification-alarm">
-									<span className="wave wave-danger" />
-									<span className="dot" />
-								</div>
-							</a>
-
-							<div
-								className="dropdown-menu dropdown-menu-right header-right-dropdown-width pb-0"
-								aria-labelledby="messagesDropdown"
-							>
-								<h6 className="dropdown-header weight500 ">Messages</h6>
-								<div className="dropdown-divider mb-0" />
-								<a
-									className="dropdown-item border-bottom msg-unread"
-									href="javascript:;"
-								>
-									<div className="float-left notificaton-thumb">
-										<img
-											className="rounded-circle"
-											src="assets/img/avatar/avatar4.jpg"
-											alt=""
-										/>
-									</div>
-									<span className="weight500">Andrew Flinton</span>
-									<span className="small float-right text-muted">08:30 AM</span>
-
-									<div className="dropdown-message">
-										I hope that you will be there in time. See you then
-									</div>
-								</a>
-
-								<a
-									className="dropdown-item border-bottom msg-unread"
-									href="javascript:;"
-								>
-									<div className="float-left notificaton-thumb">
-										<img
-											className="rounded-circle"
-											src="assets/img/avatar/avatar2.jpg"
-											alt=""
-										/>
-									</div>
-									<span className="weight500">John Doe</span>
-									<span className="small float-right text-muted">10:28 AM</span>
-
-									<div className="dropdown-message">
-										Hello this is an example message. Just want to show how it
-										looks
-									</div>
-								</a>
-
-								<a className="dropdown-item border-bottom" href="javascript:;">
-									<div className="float-left notificaton-thumb">
-										<img
-											className="rounded-circle"
-											src="assets/img/avatar/avatar3.jpg"
-											alt=""
-										/>
-									</div>
-									<span className="weight500">Dash Don</span>
-									<span className="small float-right text-muted">07:12 PM</span>
-
-									<div className="dropdown-message">
-										Hi, This is Dash Don form usa. I'm looking for someone who
-										really good at design and frontend like mosaddek
-									</div>
-								</a>
-
-								<a className="dropdown-item border-bottom" href="javascript:;">
-									<div className="float-left notificaton-thumb">
-										<img
-											className="rounded-circle"
-											src="assets/img/avatar/avatar1.jpg"
-											alt=""
-										/>
-									</div>
-									<span className="weight500">dkmosa</span>
-									<span className="small float-right text-muted">12:10 PM</span>
-
-									<div className="dropdown-message">
-										We build a beautiful dashboard admin panel for professional
-									</div>
-								</a>
-								<a className="dropdown-item small" href="javascript:;">
-									View all messages
-								</a>
-							</div>
-						</li>
-						<NavDropdown side="right" title={<i className="vl_bell" />}>
+						<NavDropdown
+							side="right"
+							title={
+								<React.Fragment>
+									<i className="vl_bell" />
+									<span className="d-lg-none ml-1">
+										Notification
+										<span className="badge badge-pill badge-warning">
+											5 New
+										</span>
+									</span>
+								</React.Fragment>
+							}
+						>
 							<DropdownHeader>Notification</DropdownHeader>
 
 							<div className="dropdown-divider mb-0" />
@@ -293,52 +216,7 @@ class Nav extends Component {
 								View all notification
 							</Link>
 						</NavDropdown>
-						<li className="nav-item dropdown d-none">
-							<a
-								className="nav-link dropdown-toggle mr-lg-3"
-								id="alertsDropdown"
-								href="javascript:;"
-								data-toggle="dropdown"
-								aria-haspopup="true"
-								aria-expanded="false"
-							>
-								<i className="vl_bell" />
-								<span className="d-lg-none">
-									Notification
-									<span className="badge badge-pill badge-warning">5 New</span>
-								</span>
-								<div className="notification-alarm">
-									<span className="wave wave-warning" />
-									<span className="dot bg-warning" />
-								</div>
-							</a>
 
-							<div
-								className="dropdown-menu dropdown-menu-right header-right-dropdown-width pb-0"
-								aria-labelledby="alertsDropdown"
-							>
-								<h6 className="dropdown-header weight500">Notification</h6>
-
-								<div className="dropdown-divider mb-0" />
-								<a className="dropdown-item border-bottom" href="javascript:;">
-									<span className="text-primary">
-										<span className="weight500">
-											<i className="vl_bell weight600 pr-2" />Weekly Update
-										</span>
-									</span>
-									<span className="small float-right text-muted">03:14 AM</span>
-
-									<div className="dropdown-message f12">
-										This week project update report generated. All team members
-										are requested to check the updates
-									</div>
-								</a>
-
-								<a className="dropdown-item small" href="javascript:;">
-									View all notification
-								</a>
-							</div>
-						</li>
 						<NavDropdown
 							side="right"
 							title={
@@ -348,6 +226,12 @@ class Nav extends Component {
 										src="/images/avatar1.jpg"
 										alt=""
 									/>
+									<span className="d-lg-none ml-1">
+										Notification
+										<span className="badge badge-pill badge-warning">
+											5 New
+										</span>
+									</span>
 								</div>
 							}
 						>
@@ -372,6 +256,10 @@ class Nav extends Component {
 			</nav>
 		)
 	}
+}
+
+MegaMenu.propTypes = {
+	floating: PropTypes.bool,
 }
 
 export default Nav
