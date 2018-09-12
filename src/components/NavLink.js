@@ -3,41 +3,16 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import classNames from "classnames"
-import enhanceWithClickOutside from "react-click-outside"
+import Toggle from "../hoc/Toggle"
 
-class NavLink extends Component {
-	constructor(props) {
-		super(props)
-		this.state = {
-			show: false,
-		}
-		this.toggle = this.toggle.bind(this)
-	}
-
-	componentDidMount() {}
-
-	componentWillUnmount() {}
-
-	handleClickOutside() {
-		this.toggle(false)
-	}
-
-	toggle(off) {
-		this.setState(state => ({
-			show: !off ? off : !state.show,
-		}))
-	}
-
-	render() {
-		const { show } = this.state
-		const { level, title, children, iconClass } = this.props
-		const { toggle } = this
-		return (
+const NavLink = ({ level, title, children, iconClass }) => (
+	<Toggle
+		render={({ active, toggle }) => (
 			<li className={classNames({ "nav-item": level === "second" })} title={title}>
 				<a
 					onClick={toggle}
 					className={classNames("nav-link nav-link-collapse", {
-						collapsed: !show,
+						collapsed: !active,
 					})}
 				>
 					{level === "second" && <i className={iconClass} />}
@@ -47,15 +22,15 @@ class NavLink extends Component {
 					className={classNames("collapse", {
 						"sidenav-second-level": level === "second",
 						"sidenav-third-level": level === "third",
-						show: show,
+						show: active,
 					})}
 				>
 					{children}
 				</ul>
 			</li>
-		)
-	}
-}
+		)}
+	/>
+)
 
 NavLink.propTypes = {
 	level: PropTypes.oneOf(["second", "third"]).isRequired,
@@ -64,4 +39,4 @@ NavLink.propTypes = {
 	iconClass: PropTypes.string,
 }
 
-export default enhanceWithClickOutside(NavLink)
+export default NavLink
