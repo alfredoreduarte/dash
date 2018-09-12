@@ -102,6 +102,14 @@ export default connect(
 							<div className="card-header border-0">
 								<div className="custom-title-wrap bar-danger">
 									<div className="custom-title">Dropdowns</div>
+									<div className="widget-action-link">
+										<Link
+											to="/users"
+											class="btn btn-transparent text-secondary p-0 text-muted"
+										>
+											Subtle link
+										</Link>
+									</div>
 								</div>
 							</div>
 							<div className="card-body">
@@ -116,12 +124,16 @@ export default connect(
 									"outline-primary",
 								].map(btnStyle => (
 									<div className="btn-group">
-										<Dropdown title={btnStyle} className={`btn-${btnStyle}`}>
+										<Dropdown
+											title={btnStyle}
+											className={`btn-${btnStyle}`}
+											arrow
+										>
 											<a href="#">Action</a>
 											<div className="dropdown-divider" />
 											<a href="#">Action2</a>
 											<a href="#">Action3</a>
-										</Dropdown>{" "}
+										</Dropdown>
 									</div>
 								))}
 							</div>
@@ -134,6 +146,17 @@ export default connect(
 					<div className="card-header border-0">
 						<div className="custom-title-wrap bar-danger">
 							<div className="custom-title">Tabs</div>
+							<div className="widget-action-link">
+								<Dropdown
+									title={<i className="vl_ellipsis-fill-h" />}
+									className="btn-transparent text-secondary p-0"
+									menuClassName="dropdown-menu-right vl-dropdown"
+								>
+									<a href="#">Action</a>
+									<a href="#">Action2</a>
+									<a href="#">Action3</a>
+								</Dropdown>
+							</div>
 						</div>
 					</div>
 					<div className="card-body">
@@ -192,6 +215,18 @@ export default connect(
 					<div className="card-header border-0">
 						<div className="custom-title-wrap bar-danger">
 							<div className="custom-title">Demos</div>
+							<div className="widget-action-link">
+								<Dropdown
+									title="Filter"
+									className="btn-transparent text-secondary p-0"
+									menuClassName="dropdown-menu-right vl-dropdown"
+									arrow
+								>
+									<a href="#">Action</a>
+									<a href="#">Action2</a>
+									<a href="#">Action3</a>
+								</Dropdown>
+							</div>
 						</div>
 					</div>
 					<div className="card-body">

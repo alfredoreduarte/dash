@@ -5,18 +5,20 @@ import PropTypes from "prop-types"
 import classNames from "classnames"
 import Toggle from "../hoc/Toggle"
 
-const Dropdown = ({ title, children, className }) => (
+const Dropdown = ({ title, arrow, children, className, menuClassName }) => (
 	<Toggle
 		render={({ active, toggle, ref }) => (
 			<div ref={ref} className={classNames("dropdown", { show: active })}>
 				<button
-					className={classNames("btn dropdown-toggle", className)}
+					className={classNames("btn", className, {
+						"dropdown-toggle": arrow,
+					})}
 					type="button"
 					onClick={toggle}
 				>
 					{title}
 				</button>
-				<div className={classNames("dropdown-menu pt-0 pb-0", { show: active })}>
+				<div className={classNames("dropdown-menu", menuClassName, { show: active })}>
 					{React.Children.map(children, child => {
 						/**
 						 * Avoids overwriting className on dropdown-dividers
@@ -33,10 +35,11 @@ const Dropdown = ({ title, children, className }) => (
 )
 
 Dropdown.propTypes = {
-	// level: PropTypes.oneOf(["second", "third"]).isRequired,
 	title: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
 	children: PropTypes.oneOfType([PropTypes.element, PropTypes.array]).isRequired,
 	className: PropTypes.string,
+	arrow: PropTypes.bool,
+	menuClassName: PropTypes.string,
 }
 
 export default Dropdown
