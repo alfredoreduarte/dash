@@ -124,10 +124,12 @@ class Nav extends Component {
 					</ul>
 
 					<ul className="navbar-nav header-links">
-						<NavDropdown title="Application">
-							<Link to="/" className="dropdown-item">
+						<li className="nav-item mr-4">
+							<Link to="/" className="nav-link">
 								Home
 							</Link>
+						</li>
+						<NavDropdown title="Application">
 							<Link to="/users" className="dropdown-item">
 								Users
 							</Link>
