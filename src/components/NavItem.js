@@ -2,6 +2,7 @@
 
 import React, { Component } from "react"
 import PropTypes from "prop-types"
+import classNames from "classnames"
 import enhanceWithClickOutside from "react-click-outside"
 
 class NavItem extends Component {
@@ -36,23 +37,29 @@ class NavItem extends Component {
 				<a
 					className="nav-link dropdown-toggle mr-lg-2"
 					href="javascript:;"
-					data-toggle="dropdown"
-					aria-haspopup="true"
 					aria-expanded={show}
 					onClick={toggle}
 				>
 					{title}
 				</a>
 				<div
-					className={`dropdown-menu ${side && "dropdown-menu-" + side} ${show && "show"}`}
+					// className={`dropdown-menu ${side && "dropdown-menu-" + side} ${show && "show"}`}
+					className={classNames("dropdown-menu pb-0", {
+						show: show,
+						"dropdown-menu-right": side === "right",
+						"dropdown-menu-left": side === "left",
+						"header-right-dropdown-width": side === "right",
+					})}
 					onClick={toggle}
 				>
 					{React.Children.map(children, child => {
-						if (child.type === "div") {
+						if (child.type === "a") {
 							// avoids overwriting className on dropdown-dividers
 							return child
+							// return React.cloneElement(child, { className: "dropdown-item" })
 						}
-						return React.cloneElement(child, { className: "dropdown-item" })
+						// return React.cloneElement(child, { className: "dropdown-item" })
+						return child
 					})}
 				</div>
 			</li>
