@@ -9,15 +9,9 @@ class TabList extends Component {
 		super(props)
 	}
 	render() {
-		const { activeIndex, handleSelected, children, justified, mode, className } = this.props
+		const { activeIndex, handleSelected, children, className } = this.props
 		return (
-			<ul
-				className={classNames(className, "nav", {
-					"nav-tabs": !mode || mode === "tabs",
-					"nav-pills": mode === "pills",
-					"nav-fill": justified,
-				})}
-			>
+			<ul className={classNames("nav", className)}>
 				{React.Children.map(children, (child, index) => {
 					return (
 						<li className="nav-item">
@@ -35,8 +29,6 @@ class TabList extends Component {
 
 TabList.propTypes = {
 	children: PropTypes.oneOfType([PropTypes.element, PropTypes.array]),
-	justified: PropTypes.bool,
-	mode: PropTypes.oneOf(["tabs", "pills"]),
 }
 
 TabList.role = "TabList"

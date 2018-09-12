@@ -107,7 +107,7 @@ export default connect(
 					</div>
 					<div className="card-body">
 						<Tabs>
-							<TabList className="mb-3" mode="pills">
+							<TabList className="mb-3 nav-pills">
 								<Tab>Tab 1</Tab>
 								<Tab>Tab 2</Tab>
 							</TabList>
