@@ -2,15 +2,17 @@
 
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
-import NavItem from "./NavItem"
+import classNames from "classnames"
+import NavDropdown from "./NavDropdown"
 import NavLink from "./NavLink"
+import MegaMenu from "./MegaMenu"
 import DropdownHeader from "./DropdownHeader"
 
 class Nav extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			collapsed: true,
+			leftSidebarCollapsed: true,
 		}
 		this.LEFT_SIDE_TOGGLED_CLASS = "left-side-toggled"
 		this.toggleSideNav = this.toggleSideNav.bind(this)
@@ -22,324 +24,22 @@ class Nav extends Component {
 	componentWillUnmount() {}
 
 	toggleSideNav() {
-		if (this.state.collapsed) {
+		if (this.state.leftSidebarCollapsed) {
 			document.body.classList.add(this.LEFT_SIDE_TOGGLED_CLASS)
 		} else {
 			document.body.classList.remove(this.LEFT_SIDE_TOGGLED_CLASS)
 		}
 		this.setState(state => ({
-			collapsed: !state.collapsed,
+			leftSidebarCollapsed: !state.leftSidebarCollapsed,
 		}))
 	}
+
 	render() {
-		const { toggleSideNav } = this
-		const { collapsed } = this.state
+		const { toggleSideNav, toggleMegaMenu } = this
+		const { leftSidebarCollapsed } = this.state
 		return (
 			<nav className="navbar navbar-expand-lg fixed-top navbar-dark" id="mainNav">
-				<Link className="navbar-brand d-flex align-items-center" to="/">
-					<img
-						className="pr-3 float-left"
-						src="/images/logo-icon.png"
-						srcSet="/images/logo-icon@2x.png 2x"
-						alt=""
-					/>
-					<div className="float-left">
-						<div>
-							Dash <i className="fa fa-caret-down pl-2 d-none" />
-						</div>
-						<span className="page-direction f12 weight300 d-none">
-							<span>home</span>
-							<i className="fa fa-angle-right" />
-							<span>ui element</span>
-						</span>
-					</div>
-				</Link>
-
-				<div id="jq-dropdown-1" className="jq-dropdown">
-					<div className="b-mega-menu">
-						<div className="card card-shadow">
-							<div className="card-header p-2 pl-3">
-								<div className="navbar-brand mt-2">
-									<img
-										className="pr-3 float-left"
-										src="assets/img/logo-icon.png"
-										srcSet="assets/img/logo-icon@2x.png 2x"
-										alt=""
-									/>
-									<div className="float-left">
-										<div>Dash</div>
-										<span className="page-direction f12 weight300">
-											<span>home</span>
-											<i className="fa fa-angle-right" />
-											<span>ui element</span>
-										</span>
-									</div>
-								</div>
-
-								<div className="widget-action-link">
-									<ul
-										className="nav nav-tabs wal-nav-tabs"
-										id="myTab"
-										role="tablist"
-									>
-										<li className="nav-item">
-											<a
-												className="nav-link active"
-												id="home-tab"
-												data-toggle="tab"
-												href="#home"
-												role="tab"
-												aria-controls="home"
-												aria-selected="true"
-											>
-												<i className="fa fa-home" />
-											</a>
-										</li>
-										<li className="nav-item">
-											<a
-												className="nav-link"
-												id="analytics-tab"
-												data-toggle="tab"
-												href="#analytics"
-												role="tab"
-												aria-controls="analytics"
-												aria-selected="false"
-											>
-												<i className="fa fa-desktop" />
-											</a>
-										</li>
-										<li className="nav-item">
-											<a
-												className="nav-link"
-												id="application-tab"
-												data-toggle="tab"
-												href="#application"
-												role="tab"
-												aria-controls="application"
-												aria-selected="false"
-											>
-												<i className="fa fa-magnet" />
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div className="card-body p-0 ">
-								<div className="tab-content" id="myTabContent">
-									<div
-										className="tab-pane fade show active"
-										id="home"
-										role="tabpanel"
-										aria-labelledby="home-tab"
-									>
-										<div className="row no-gutters">
-											<div className="col-4 border-right">
-												<div
-													className="nav flex-column nav-pills"
-													id="v-pills-tab"
-													role="tablist"
-													aria-orientation="vertical"
-												>
-													<a
-														className="nav-link active"
-														id="v-pills-home-tab"
-														data-toggle="pill"
-														href="#v-pills-home"
-														role="tab"
-														aria-controls="v-pills-home"
-														aria-selected="true"
-													>
-														<i className="fa fa-home pr-2" />{" "}
-														Application
-													</a>
-													<a
-														className="nav-link"
-														id="v-pills-report-tab"
-														data-toggle="pill"
-														href="#v-pills-report"
-														role="tab"
-														aria-controls="v-pills-report"
-														aria-selected="false"
-													>
-														<i className="fa fa-desktop pr-2" /> Reports
-													</a>
-													<a
-														className="nav-link"
-														id="v-pills-management-tab"
-														data-toggle="pill"
-														href="#v-pills-management"
-														role="tab"
-														aria-controls="v-pills-management"
-														aria-selected="false"
-													>
-														<i className="fa fa-magnet pr-2" />Management
-													</a>
-													<a
-														className="nav-link"
-														id="v-pills-blog-tab"
-														data-toggle="pill"
-														href="#v-pills-blog"
-														role="tab"
-														aria-controls="v-pills-blog"
-														aria-selected="false"
-													>
-														<i className="fa fa-comments-o pr-2" />Blog
-													</a>
-												</div>
-											</div>
-											<div className="col-8">
-												<div
-													className="tab-content"
-													id="v-pills-tabContent"
-												>
-													<div
-														className="tab-pane fade show active"
-														id="v-pills-home"
-														role="tabpanel"
-														aria-labelledby="v-pills-home-tab"
-													>
-														<ul className="list-unstyled b-mega-menu-link">
-															<li>
-																<a href="javascript:;">
-																	Bootstrap 4 Stable
-																</a>
-															</li>
-															<li className="active">
-																<a href="javascript:;">
-																	Dash Modern Admin
-																</a>
-															</li>
-															<li>
-																<a href="javascript:;">
-																	Awesome Widgets Collection
-																</a>
-															</li>
-															<li>
-																<a href="javascript:;">
-																	Developer Friendly Code
-																</a>
-															</li>
-															<li>
-																<a href="javascript:;">
-																	SASS and GULP Task
-																</a>
-															</li>
-															<li>
-																<a href="javascript:;">
-																	Fully Responsive
-																</a>
-															</li>
-														</ul>
-													</div>
-													<div
-														className="tab-pane fade"
-														id="v-pills-report"
-														role="tabpanel"
-														aria-labelledby="v-pills-report-tab"
-													>
-														<ul className="list-unstyled b-mega-menu-link">
-															<li>
-																<a href="javascript:;">
-																	Daily Reports
-																</a>
-															</li>
-															<li>
-																<a href="javascript:;">
-																	Weekly Reports
-																</a>
-															</li>
-															<li className="active">
-																<a href="javascript:;">
-																	Monthly Reports
-																</a>
-															</li>
-														</ul>
-													</div>
-													<div
-														className="tab-pane fade"
-														id="v-pills-management"
-														role="tabpanel"
-														aria-labelledby="v-pills-management-tab"
-													>
-														<ul className="list-unstyled b-mega-menu-link">
-															<li>
-																<a href="javascript:;">
-																	HR Management
-																</a>
-															</li>
-															<li className="active">
-																<a href="javascript:;">
-																	Product Management
-																</a>
-															</li>
-														</ul>
-													</div>
-													<div
-														className="tab-pane fade"
-														id="v-pills-blog"
-														role="tabpanel"
-														aria-labelledby="v-pills-blog-tab"
-													>
-														<ul className="list-unstyled b-mega-menu-link">
-															<li className="active">
-																<a href="javascript:;">
-																	Educational Blog
-																</a>
-															</li>
-															<li>
-																{" "}
-																<a href="javascript:;">
-																	Technology Blog
-																</a>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div
-										className="tab-pane fade"
-										id="analytics"
-										role="tabpanel"
-										aria-labelledby="analytics-tab"
-									>
-										<div className="p-5 m-4 text-center">
-											<i className="fa fa-desktop f50 text-muted mb-4" />
-											<p className="mb-5">
-												Contrary to popular belief, Lorem Ipsum is not
-												simply random text. It has roots in a piece of
-												classical Latin literature from 45 BC
-											</p>
-											<a href="javascript:;" className="btn btn-primary">
-												Get Started
-											</a>
-										</div>
-									</div>
-									<div
-										className="tab-pane fade"
-										id="application"
-										role="tabpanel"
-										aria-labelledby="application-tab"
-									>
-										<div className="p-5 m-4 text-center">
-											<i className="fa fa-magnet f50 text-muted mb-4" />
-											<p className="mb-5">
-												The standard chunk of Lorem Ipsum used since the
-												1500s is reproduced below for those interested.
-												Sections 1.10.32 and 1.10.33
-											</p>
-											<a href="javascript:;" className="btn btn-purple">
-												Get Started
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
+				<MegaMenu />
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -408,14 +108,14 @@ class Nav extends Component {
 					<ul className="navbar-nav sidenav-toggler">
 						<li className="nav-item">
 							<a className="nav-link text-center" onClick={toggleSideNav}>
-								{collapsed && <i className="fa fa-angle-left" />}
-								{!collapsed && <i className="fa fa-angle-right" />}
+								{leftSidebarCollapsed && <i className="fa fa-angle-left" />}
+								{!leftSidebarCollapsed && <i className="fa fa-angle-right" />}
 							</a>
 						</li>
 					</ul>
 
-					<ul className="navbar-nav header-links">
-						<NavItem title="Examples">
+					<ul className="navbar-nav header-links" id="cosote">
+						<NavDropdown title="Application">
 							<Link to="/" className="dropdown-item">
 								Home
 							</Link>
@@ -425,8 +125,10 @@ class Nav extends Component {
 							<Link to="/redux" className="dropdown-item">
 								Redux
 							</Link>
-						</NavItem>
-						<NavItem title="More examples">
+						</NavDropdown>
+					</ul>
+					<ul className="navbar-nav header-links" id="cosote2">
+						<NavDropdown title="More examples">
 							<Link to="/" className="dropdown-item">
 								Home
 							</Link>
@@ -437,7 +139,7 @@ class Nav extends Component {
 							<Link to="/redux" className="dropdown-item">
 								Redux
 							</Link>
-						</NavItem>
+						</NavDropdown>
 					</ul>
 
 					<ul className="navbar-nav header-links ml-auto hide-arrow">
@@ -543,7 +245,7 @@ class Nav extends Component {
 								</a>
 							</div>
 						</li>
-						<NavItem side="right" title={<i className="vl_bell" />}>
+						<NavDropdown side="right" title={<i className="vl_bell" />}>
 							<DropdownHeader>Notification</DropdownHeader>
 
 							<div className="dropdown-divider mb-0" />
@@ -590,7 +292,7 @@ class Nav extends Component {
 							<Link to="/" className="dropdown-item">
 								View all notification
 							</Link>
-						</NavItem>
+						</NavDropdown>
 						<li className="nav-item dropdown d-none">
 							<a
 								className="nav-link dropdown-toggle mr-lg-3"
@@ -637,7 +339,7 @@ class Nav extends Component {
 								</a>
 							</div>
 						</li>
-						<NavItem
+						<NavDropdown
 							side="right"
 							title={
 								<div className="user-thumb">
@@ -659,7 +361,7 @@ class Nav extends Component {
 							<Link to="/redux" className="dropdown-item">
 								Redux <span className="badge badge-success">5</span>
 							</Link>
-						</NavItem>
+						</NavDropdown>
 						<li className="nav-item d-none">
 							<a href="javascript:;" className="nav-link right_side_toggle">
 								<i className="icon-options-vertical"> </i>
