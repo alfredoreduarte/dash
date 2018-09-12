@@ -7,7 +7,7 @@ import Breadcrumb from "../../Users/Breadcrumb/"
 import User from "../../Users/components/User"
 
 const Users = ({ user }) => (
-	<div className="">
+	<div className="container-fluid">
 		<Helmet>
 			<title>{user ? user.name : "Showing user"}</title>
 		</Helmet>

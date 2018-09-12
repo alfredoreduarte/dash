@@ -5,7 +5,7 @@ import Breadcrumb from "../../Users/Breadcrumb/"
 import List from "../../Users/List/"
 
 const Users = () => (
-	<div className="">
+	<div className="container-fluid">
 		<Breadcrumb />
 		<div className="row">
 			<div className="col-4">

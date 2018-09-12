@@ -17,21 +17,26 @@ import Users from "./Users/routes"
 let BasicExample = ({ actions }) => (
 	<Router>
 		<div>
-			<Nav />
+			<Nav className="navbar navbar-expand-lg fixed-top navbar-dark" />
 			<div className="content-wrapper">
-				<div className="container-fluid">
-					<Route exact path="/" component={Home} />
-					<Route path="/users" component={Users} />
-					<Route path="/redux" component={ReduxExample} />
-					<Route path="/topics" component={Topics} />
-				</div>
+				<Route exact path="/" component={Home} />
+				<Route path="/users" component={Users} />
+				<Route path="/redux" component={ReduxExample} />
+				<Route path="/topics" component={Topics} />
+				<footer className="sticky-footer">
+					<div className="container">
+						<div className="text-center">
+							<small>Copyright © VectorLab 2018</small>
+						</div>
+					</div>
+				</footer>
 			</div>
 		</div>
 	</Router>
 )
 
 const ReduxExample = () => (
-	<div>
+	<div className="container-fluid">
 		<Helmet>
 			<title>Redux Example</title>
 		</Helmet>
@@ -46,7 +51,7 @@ const ReduxExample = () => (
 )
 
 const Topics = ({ match }) => (
-	<div>
+	<div className="container-fluid">
 		<Helmet>
 			<title>Topics</title>
 		</Helmet>

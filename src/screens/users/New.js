@@ -8,7 +8,7 @@ import Breadcrumb from "../../Users/Breadcrumb/"
 import Form from "../../Users/Form/"
 
 const Users = ({ actions }) => (
-	<div className="">
+	<div className="container-fluid">
 		<Helmet>
 			<title>Create User</title>
 		</Helmet>
