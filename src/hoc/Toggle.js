@@ -5,7 +5,9 @@ import PropTypes from "prop-types"
 import ReactDOM from "react-dom"
 
 /**
- * Exposes an "active" state and a "toggle()" method for changing it.
+ * Exposes an "active" state, a "toggle()" method for changing it, and a "ref".
+ * The child component must use that ref in order to detect clicks outside of it.
+ *
  * Using render props instead of a HOC based on this article:
  * https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce
  */
@@ -58,14 +60,16 @@ class Toggle extends Component {
 	render() {
 		const { wrappedRef, ...rest } = this.props
 		return (
-			<Fragment
-				ref={c => {
-					this.__wrappedInstance = c
-					this.__domNode = ReactDOM.findDOMNode(c)
-					wrappedRef && wrappedRef(c)
-				}}
-			>
-				{this.props.render({ ...this.state, toggle: this.toggle })}
+			<Fragment>
+				{this.props.render({
+					...this.state,
+					toggle: this.toggle,
+					ref: c => {
+						this.__wrappedInstance = c
+						this.__domNode = ReactDOM.findDOMNode(c)
+						wrappedRef && wrappedRef(c)
+					},
+				})}
 			</Fragment>
 		)
 	}

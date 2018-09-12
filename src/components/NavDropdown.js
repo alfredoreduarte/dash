@@ -5,14 +5,13 @@ import PropTypes from "prop-types"
 import classNames from "classnames"
 import Toggle from "../hoc/Toggle"
 
-const NavItem = ({ title, side, children }) => (
+const NavDropdown = ({ title, side, children }) => (
 	<Toggle
-		render={({ active, toggle }) => (
-			<li className={`nav-item dropdown ${active && "show"}`}>
+		render={({ active, toggle, ref }) => (
+			<li ref={ref} className={`nav-item dropdown ${active && "show"}`}>
 				<a
 					className="nav-link dropdown-toggle mr-lg-2"
 					href="javascript:;"
-					aria-expanded={active}
 					onClick={toggle}
 				>
 					{title}
@@ -41,10 +40,10 @@ const NavItem = ({ title, side, children }) => (
 	/>
 )
 
-NavItem.propTypes = {
+NavDropdown.propTypes = {
 	title: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
 	side: PropTypes.oneOf(["left", "right"]),
 	children: PropTypes.oneOfType([PropTypes.element, PropTypes.array]),
 }
 
-export default NavItem
+export default NavDropdown

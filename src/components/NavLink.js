@@ -7,8 +7,8 @@ import Toggle from "../hoc/Toggle"
 
 const NavLink = ({ level, title, children, iconClass }) => (
 	<Toggle
-		render={({ active, toggle }) => (
-			<li className={classNames({ "nav-item": level === "second" })} title={title}>
+		render={({ active, toggle, ref }) => (
+			<li ref={ref} className={classNames({ "nav-item": level === "second" })} title={title}>
 				<a
 					onClick={toggle}
 					className={classNames("nav-link nav-link-collapse", {
