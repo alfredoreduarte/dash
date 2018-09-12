@@ -105,7 +105,7 @@ export default connect(
 									<div className="widget-action-link">
 										<Link
 											to="/users"
-											class="btn btn-transparent text-secondary p-0 text-muted"
+											className="btn btn-transparent text-secondary p-0 text-muted"
 										>
 											Subtle link
 										</Link>
@@ -116,14 +116,14 @@ export default connect(
 								<p className="text-muted mt-3">Button Variant</p>
 								{[
 									"danger",
+									"info",
 									"warning",
-									"primary",
 									"success",
-									"secondary",
 									"primary",
+									"secondary",
 									"outline-primary",
 								].map(btnStyle => (
-									<div className="btn-group">
+									<div key={btnStyle} className="btn-group">
 										<Dropdown
 											title={btnStyle}
 											className={`btn-${btnStyle}`}
